@@ -6,11 +6,11 @@
 /*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:45:21 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/17 13:32:38 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/17 14:26:21 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
 	{
