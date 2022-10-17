@@ -6,11 +6,11 @@
 /*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 13:33:48 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/17 14:12:48 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/17 14:23:17 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
