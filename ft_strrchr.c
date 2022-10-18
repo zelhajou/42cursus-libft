@@ -6,7 +6,7 @@
 /*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:29:24 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/17 19:30:44 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:19:53 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strrchar(const char *s, int c)
 	while (s[size] >= 0)
 	{
 		if (s[size] == c)
-			return (s + size);
+			return ((char *)s + size);
 		size--;
 	}
-	return (s + size);
+	return (0);
 }
