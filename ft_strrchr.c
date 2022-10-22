@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:29:24 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/20 01:07:19 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:40:28 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	size;
+	int	size;
 
 	size = ft_strlen(s);
-	while (s[size] >= 0)
+	while (size >= 0)
 	{
-		if (s[size] == c)
+		if (s[size] == (char)c)
 			return ((char *)s + size);
 		size--;
 	}

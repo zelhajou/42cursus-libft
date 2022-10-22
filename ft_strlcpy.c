@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 03:55:53 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/21 20:26:05 by zelhajou         ###   ########.fr       */
+/*   Created: 2022/10/20 22:29:54 by zelhajou          #+#    #+#             */
+/*   Updated: 2022/10/20 23:16:13 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t		i;
-	char		*obj;
+	size_t	i;
+	size_t	len;
+	char	*s1;
+	char	*s2;
 
 	i = 0;
-	obj = (char *)s;
-	while (i < n)
+	s1 = (char *)dst;
+	s2 = (char *)src;
+	len = ft_strlen(s2);
+	if (size == 0)
+		return (len);
+	while (src[i] != '\0' && i < size - 1)
 	{
-		if (obj[i] == (char)c)
-			return (&obj[i]);
+		dst[i] = src[i];
 		i++;
 	}
-	return (0);
+	dst[i] = '\0';
+	return (len);
 }
