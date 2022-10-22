@@ -4,3 +4,6 @@ a.out
 libftTester/
 Libftest/
 objs/
+.vscode/settings.json
+test.c
+libft.a
