@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zelhajou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 17:58:57 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/20 19:53:41 by zelhajou         ###   ########.fr       */
+/*   Created: 2022/10/21 04:42:09 by zelhajou          #+#    #+#             */
+/*   Updated: 2022/10/21 04:42:11 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h";
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -18,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	str = (char *)s;
-	while (i < n)
+	while ((size_t)i < n)
 	{
 		str[i] = '\0';
 		i++;
