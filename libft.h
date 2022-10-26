@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:53:36 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/21 23:58:34 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:19:56 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,22 +41,29 @@ int		ft_toupper(int c);
 /* -------------------------------------------------------------------------- */
 /* ****************************   <string.h>   ****************************** */
 /* -------------------------------------------------------------------------- */
+/* String Length - strlen */
 size_t	ft_strlen(const char *s);
 /* -------------------------------------------------------------------------- */
+/* Character Search - strchr & strrchr */
 char	*ft_strchr(const char *s, int c);
-/* -------------------------------------------------------------------------- */
 char	*ft_strrchr(const char *s, int c);
 /* -------------------------------------------------------------------------- */
+/* Substring Search - strstr */
+char    *strnstr(const char    *big, const char *little, size_t len);
+/* -------------------------------------------------------------------------- */
+/* Comparison - strcmp */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 /* -------------------------------------------------------------------------- */
-size_t  *ft_strlcat(char *dst, const void *src, size_t dstsize);
+// size_t  *ft_strlcat(char *dst, const void *src, size_t dstsize);
+
 /* -------------------------------------------------------------------------- */
+/* Memory Functions */
 void	*ft_memchr(const void *s, int c, size_t n);
-/* -------------------------------------------------------------------------- */
 void	*ft_memset(void *s, int c, size_t n);
-/* -------------------------------------------------------------------------- */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 /* -------------------------------------------------------------------------- */
+/* Old Conversion Functions */
 
 /* -------------------------------------------------------------------------- */
 void	ft_bzero(void *s, size_t n);
