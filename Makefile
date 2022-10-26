@@ -15,6 +15,7 @@ SRCS = ft_memset.c		\
 		ft_strncmp.c		\
 		ft_strlcpy.c \
 		ft_memcmp.c \
+		ft_strnstr.c \
 	
 
 NAME = libft.a
