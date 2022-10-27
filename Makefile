@@ -17,7 +17,11 @@ SRCS = ft_memset.c		\
 		ft_memcmp.c \
 		ft_strnstr.c \
 		ft_atoi.c \
-	
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+
 
 NAME = libft.a
 
