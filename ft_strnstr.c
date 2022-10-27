@@ -6,10 +6,18 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:03:39 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/26 18:04:07 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/27 10:36:08 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Find the first substring in a length-limited string
+
+- const char * big : The string to be searched
+
+- const char * little : The string to search for
+
+- size_t len : the maximum number of characters to search
+*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -21,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	c = 0;
 	if (!big && !len)
 		return (0);
-	if (!little && little[i] == '\0')
+	if (little[i] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
