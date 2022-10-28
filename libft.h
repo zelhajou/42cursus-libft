@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:53:36 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/27 18:16:50 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/28 09:23:28 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 /* -------------------------------------------------------------------------- */
 /* Substring Search - strstr */
-char    *strnstr(const char    *big, const char *little, size_t len);
+char    *ft_strnstr(const char    *big, const char *little, size_t len);
 /* -------------------------------------------------------------------------- */
 /* Comparison - strcmp */
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -85,5 +85,6 @@ char	*strdup(const char *s);
 /* -------------------------------------------------------------------------- */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
