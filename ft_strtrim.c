@@ -6,13 +6,13 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 07:48:23 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/28 19:16:59 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:49:58 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char  *str_first_set(const char *s1, const char *set)
+int  first_set(const char *s1, const char *set)
 {
     int     i;
     int     c;
@@ -30,16 +30,18 @@ char  *str_first_set(const char *s1, const char *set)
         j++;
       }
       if (c == 0)
-         return (char *)&(s1[i]);
+         return (i);
       i++;
     }
-    return ((char *)s1);
+    return(0);
 }
-char  *str_last_set(const char *s1, const char *set, int len)
+int  last_set(const char *s1, const char *set)
 {
     int     c;
     int     j;
-
+	int		len;
+    
+	len = ft_strlen(s1);
     while (len--)
     {
       c = 0;
@@ -51,49 +53,35 @@ char  *str_last_set(const char *s1, const char *set, int len)
         j++;
       }
       if (c == 0)
-        return (char *)&(s1[len]);
+        return (len);
     }
-    return ((char *)s1);
+    return (0);
 }
-
-size_t    ft_strlen_stop(const char *s, const char *s2)
-{
-    size_t    i;
-
-    i = 1;
-    while (s < s2)
-    {
-        i++;
-        s++;
-    }
-    return (i);
-}
-
-
 
 char    *ft_strtrim(char const *s1, char const *set)
 {
     char    *ptr;
-    int     len;
     int     i;
-    int loc;
-    
+    int     alloc;
+    int     first;
+    int     last;
+
     i = 0;
+    alloc = 0;
     if (!s1)
         return (NULL);
-    len = ft_strlen(s1);
-
-    char *str = str_first_set(s1, set);
-    char *str2 = str_last_set(s1, set, len);
-    loc = ft_strlen_stop(str, str2);
-    ptr = (char *)malloc(sizeof(char) * loc + 1);
+    first = first_set(s1, set);
+    last = last_set(s1, set);
+    if (first < last)
+        alloc = (last - first) + 1;
+    ptr = (char *)malloc(sizeof(char) * alloc + 1);
     if(ptr == NULL)
       return (NULL);
-    while(str <= str2)
+    while(first <= last && alloc != 0)
     {
-      ptr[i] = *str;
-      str++;
-      i++;
+        ptr[i] = s1[first];
+        first++;
+        i++;
     }
     ptr[i] = '\0';
     return ptr;
