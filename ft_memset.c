@@ -6,10 +6,16 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:28:07 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/21 22:50:49 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:18:22 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 
+ - void *memset(void *ptr, int byteval, size_t len) - 
+
+memset sets the first len bytes of the memory area pointed to by 
+ptr to the value specified by byteval 
+*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
