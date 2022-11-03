@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 /* 
- - void *memset(void *ptr, int byteval, size_t len) - 
-
-memset sets the first len bytes of the memory area pointed to by 
-ptr to the value specified by byteval 
+	ft_memset() sets the first len bytes of the memory area pointed to by 
+	s to the value specified by c
 */
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ft_atoi() convert a string to an integer
+*/
+
 int	ft_atoi(const char *str)
 {
 	int			sign;

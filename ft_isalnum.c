@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ft_isalnum() checks for an alphanumeric character; 
+	it is equivalent to (ft_isalpha(c) || ft_isdigit(c)).
+*/
+
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')

@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ft_memcmp() compares the first n bytes (eachinterpreted as unsigned char) 
+	of the memory areas s1 and s2.
+*/
+
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

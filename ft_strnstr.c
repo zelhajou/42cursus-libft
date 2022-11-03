@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Find the first substring in a length-limited string
-
-- const char * big : The string to be searched
-
-- const char * little : The string to search for
-
-- size_t len : the maximum number of characters to search
+/* 
+	ft_strnstr() Find the first substring in a length-limited string
+	- const char * big : The string to be searched
+	- const char * little : The string to search for
+	- size_t len : the maximum number of characters to search
 */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

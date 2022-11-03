@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ft_strlcpy() copies up to size - 1 characters from the NUL-terminated 
+	string src to dst, NUL-terminating the result.
+*/
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
