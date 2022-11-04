@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:03:07 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/01 11:08:15 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/04 00:32:08 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 char	*ft_strdup(const char *src)
 {
 	int		i;
+	int		size;
 	char	*str;
 
 	i = 0;
-	str = malloc(ft_strlen(src) + 1);
+	size = ft_strlen(src);
+	str = malloc(size + 1);
 	if (str == NULL)
 		return (NULL);
 	while (src[i])
