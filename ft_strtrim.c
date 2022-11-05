@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 07:48:23 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/29 14:49:58 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/04 16:58:32 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ int	first_set(const char *s1, const char *set)
 		while (set[j] != '\0')
 		{
 			if (set[j] == s1[i])
-				c--;
+				c++;
 			j++;
 		}
 		if (c == 0)
 			return (i);
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
 int	last_set(const char *s1, const char *set)
@@ -50,35 +50,33 @@ int	last_set(const char *s1, const char *set)
 		while (set[j] != '\0')
 		{
 			if (set[j] == s1[len])
-				c--;
+				c++;
 			j++;
 		}
 		if (c == 0)
 			return (len);
 	}
-	return (0);
+	return (len);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ptr;
 	int		i;
-	int		alloc;
 	int		first;
 	int		last;
 
 	i = 0;
-	alloc = 0;
 	if (!s1)
 		return (NULL);
 	first = first_set(s1, set);
 	last = last_set(s1, set);
-	if (first < last)
-		alloc = (last - first) + 1;
-	ptr = (char *)malloc(sizeof(char) * alloc + 1);
+	if (first >= last)
+		return (ft_strdup(""));
+	ptr = (char *)malloc(sizeof(char) * ((last - first) + 2));
 	if (ptr == NULL)
 		return (NULL);
-	while (first <= last && alloc != 0)
+	while (first <= last)
 	{
 		ptr[i] = s1[first];
 		first++;
