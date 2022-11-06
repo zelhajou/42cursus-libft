@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 03:19:24 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/05 03:53:08 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/05 23:45:19 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
+	long long	nbr;
+
+	nbr = n;
+	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n = n * -1;
+		nbr = nbr * -1;
 	}
-	if (n > 9)
-		ft_putnbr_fd((n / 10), fd);
-	write(fd, &"0123456789"[n % 10], 1);
+	if (nbr > 9)
+		ft_putnbr_fd((nbr / 10), fd);
+	write(fd, &"0123456789"[nbr % 10], 1);
 }
