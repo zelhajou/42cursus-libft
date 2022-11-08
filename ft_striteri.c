@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 03:26:49 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/06 04:01:30 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/07 17:36:58 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
 	while (s[i])
 	{
