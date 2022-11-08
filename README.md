@@ -2,7 +2,7 @@
 
 In this project im rebuilding a various of functions existing in standard C library and others not existing.
 
-The project is divided in 2 parts :
+The project is divided in two parts :
 ## I. Mandatory part : 
 ### Part 1 - Libc functions :
 The term "libc" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
