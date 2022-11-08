@@ -39,13 +39,14 @@ The term "libc" is commonly used as a shorthand for the "standard C library", a 
   - [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/ft_strdup.c)
   
   ### Additional functions :
-- ft_substr
-- ft_strjoin
-- t_strtrim
-- ft_split
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+- [ft_substr](https://github.com/zakelhajoui/libft/blob/main/ft_substr.c)
+- [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/ft_strjoin.c)
+- [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/ft_strtrim.c)
+- [ft_split](https://github.com/zakelhajoui/libft/blob/main/ft_split.c)
+- ft_itoa
+- [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/ft_strmapi.c)
+- [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/ft_striteri.c)
+- [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putchar_fd.c)
+- [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putstr_fd.c)
+- [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putendl_fd.c)
+- [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putnbr_fd.c)
