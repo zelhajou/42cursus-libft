@@ -6,12 +6,13 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:12:49 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/27 15:27:05 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/08 18:13:38 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	ft_calloc() — a memory allocator
+	ft_calloc() — Allocates the space for elements of an array. 
+	Initializes the elements to zero and returns a pointer to the memory.
 */
 
 #include "libft.h"
