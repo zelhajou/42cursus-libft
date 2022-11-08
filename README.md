@@ -39,3 +39,13 @@ The term "libc" is commonly used as a shorthand for the "standard C library", a 
   - [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/ft_strdup.c)
   
   ### Additional functions :
+- ft_substr
+- ft_strjoin
+- t_strtrim
+- ft_split
+- ft_strmapi
+- ft_striteri
+- ft_putchar_fd
+- ft_putstr_fd
+- ft_putendl_fd
+- ft_putnbr_fd
