@@ -3,8 +3,8 @@
 In this project im rebuilding a various of functions existing in standard C library and others not existing.
 
 The project is divided in 2 parts :
-## 1. Mandatory part : 
-### Libc :
+## I. Mandatory part : 
+### Part 1 - Libc functions :
 The term "libc" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
 **ctype.h** : This header file defines functions that are used to check or transform characters.
@@ -38,7 +38,7 @@ The term "libc" is commonly used as a shorthand for the "standard C library", a 
   - [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/ft_calloc.c)
   - [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/ft_strdup.c)
   
-  ### Additional functions :
+  ### Part 2 - Additional functions :
 - [ft_substr](https://github.com/zakelhajoui/libft/blob/main/ft_substr.c)
 - [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/ft_strjoin.c)
 - [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/ft_strtrim.c)
@@ -50,3 +50,5 @@ The term "libc" is commonly used as a shorthand for the "standard C library", a 
 - [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putstr_fd.c)
 - [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putendl_fd.c)
 - [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putnbr_fd.c)
+
+## II - Bonus part :
