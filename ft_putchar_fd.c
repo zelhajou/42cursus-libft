@@ -6,9 +6,14 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 23:11:51 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/05 02:23:28 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/08 14:30:34 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	putchar() is a function that writes a single character to the standard 
+	output stream, stdout
+*/
 
 #include "libft.h"
 
