@@ -6,41 +6,109 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:06:01 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/01 13:10:16 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/09 00:47:40 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	**ft_split(char const *s, char c)
+
+static char	**ft_free(char **str)
+{
+	int i;
+	
+	i = 0;
+	while (str[i])
+	{
+		free (str[i]);
+		i++;
+	}
+	free (str);
+	str = NULL;
+	return (str);
+}
+
+int count_word(char const *s, char c)
+{
+	int	i;
+	int	j;
+	int	flag;
+
+	i = 0;
+	j = 0;
+	flag = 0;
+	while (s[i])
+	{
+		if (s[i] != c && flag == 0)
+		{
+			j++;
+			flag = 1;
+		}
+		else if (s[i] == c && flag == 1)
+			flag = 0;
+		i++;
+	}
+	return (j);
+}
+
+int	count_char(char const *s, char c)
 {
 	int	i;
 	int	j;
 
-
 	i = 0;
 	j = 0;
-
-    while(s++ != '\0')
-    {    
-        if(*s != c)
-          i++;
-        while(*s != c)
-        {
-          s++;
-          j++;
-          
-        }
-    }
-
-	char *str = (char *)malloc(sizeof(char) * j + i + 1);
-
-	while(i)
+	while (s[i])
 	{
-		while()
-		{
-
-		}
+		if (s[j] != c)
+			j++;
+		i++;
 	}
-  
-} */
+	return (j);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int	i;
+	char **ptr;
+	int number_word;
+	int number_char;
+
+	i = 0;
+	number_char = 0;
+	if(!s)
+		return (0);
+	number_word = count_word(s, c);
+	ptr = (char **)malloc(sizeof(char *) * (number_word + 1));
+	if (!ptr)
+		return (NULL);
+	while (i < number_word)
+	{
+		while (*s == c)
+			s++;
+		number_char = count_char(s, c);
+		ptr[i] = ft_substr(s, 0, number_char);
+		if (!ptr[i])
+			ptr = ft_free(ptr);
+		s += number_char;
+		i++;
+	}
+	ptr[i] = NULL;
+	return (ptr);
+}
+
+// int main()
+// {
+// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+// 	char **ptr;
+
+// 	ptr = ft_split(str, ' ');
+// 	int i = 0;
+
+// 	while(ptr[i])
+// 	{
+// 		printf("%s\n", ptr[i]);
+// 		i++;
+// 	}
+// 	printf("%s\n", ptr[i]);
+
+// }
