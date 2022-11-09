@@ -14,8 +14,8 @@
 
 static char	**ft_free(char **str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i])
 	{
@@ -27,7 +27,7 @@ static char	**ft_free(char **str)
 	return (str);
 }
 
-int count_word(char const *s, char c)
+int	count_word(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -68,15 +68,15 @@ int	count_char(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	char **ptr;
-	int number_word;
-	int number_char;
+	int		i;
+	char	**ptr;
+	int		number_word;
+	int		number_char;
 
 	i = 0;
 	number_char = 0;
-	if(!s)
-		return (0);
+	if (!s)
+		return (NULL);
 	number_word = count_word(s, c);
 	ptr = (char **)malloc(sizeof(char *) * (number_word + 1));
 	if (!ptr)
@@ -98,7 +98,8 @@ char	**ft_split(char const *s, char c)
 
 // int main()
 // {
-// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit.
+// Sed non risus. Suspendisse";
 // 	char **ptr;
 
 // 	ptr = ft_split(str, ' ');
