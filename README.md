@@ -43,7 +43,7 @@ The term "libc" is commonly used as a shorthand for the "standard C library", a 
 - [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/ft_strjoin.c)
 - [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/ft_strtrim.c)
 - [ft_split](https://github.com/zakelhajoui/libft/blob/main/ft_split.c)
-- ft_itoa
+- [ft_itoa](https://github.com/zakelhajoui/libft/blob/main/ft_itoa.c)
 - [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/ft_strmapi.c)
 - [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/ft_striteri.c)
 - [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putchar_fd.c)
