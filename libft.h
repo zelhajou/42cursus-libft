@@ -48,11 +48,9 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-// Conversion Functions
-int		ft_atoi(const char *str);
-
 /* -----------------------------   <stdlib.h>   ----------------------------- */
 
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
