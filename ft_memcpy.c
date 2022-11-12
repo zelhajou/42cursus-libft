@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:31:40 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/03 02:26:45 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 00:09:02 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*s2;
 
 	i = 0;
-	s1 = (char *)dst;
-	s2 = (char *)src;
+	s1 = (unsigned char *)dst;
+	s2 = (unsigned char *)src;
 	if (s1 == NULL && s2 == NULL)
 		return (0);
 	while (i < n)
