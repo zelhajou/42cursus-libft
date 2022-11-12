@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 /*
-	ft_memcmp() compares the first n bytes (eachinterpreted as unsigned char) 
-	of the memory areas s1 and s2.
+       The memcmp() function compares the first n bytes (each interpreted 
+       as unsigned char) of the memory areas s1 and s2.
 */
 
 #include "libft.h"
