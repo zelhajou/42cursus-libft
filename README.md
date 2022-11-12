@@ -1,22 +1,31 @@
 # libft
 
-In this project im rebuilding a various of functions existing in standard C library and others not existing.
+This project's the first project in 42 cursus and consists of coding basic C functions existing in the standard C library and others that not existing, this project aims to code your own C library regrouping usual functions that you'll be allowed to use in all your other projects.
 
 The project is divided in two parts :
 ## I. Mandatory part : 
 ### Part 1 - Libc functions :
-The term "libc" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
+The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
 **ctype.h** : This header file defines functions that are used to check or transform characters.
-- [ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/ft_isalpha.c)
-- [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/ft_isdigit.c)
-- [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/ft_isalnum.c)
-- [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/ft_isascii.c)
-- [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/ft_isprint.c)
-- [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c)
-- [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)
+
+Each functions is receives a character represented as an int, or EOF as an argument. Characters are often manipulated as integers.
+EOF normally has the value –1 and that some hardware architectures do not allow negative values to be stored in char variables. Therefore, the character-handling functions manipulate characters as integers.
+- character-handling
+  - [ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/ft_isalpha.c)
+  - [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/ft_isdigit.c)
+  - [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/ft_isalnum.c)
+  - [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/ft_isascii.c)
+  - [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/ft_isprint.c)
+  - [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c)
+  - [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)
 
 **string.h** : This header file is used to perform operations on the string
+
+There are three types of functions that exist in the string library:
+1. the `str` functions manipulate **null-terminated** sequences of characters;
+2. the `strn` functions manipulate sequences of **non-null characters**.
+3. the `mem` functions manipulate sequences of arbitrary characters without regard to the **null character**;
 - String-processing Functions
   - [ft_strlen](https://github.com/zakelhajoui/libft/blob/main/ft_strlen.c)
   - [ft_strchr](https://github.com/zakelhajoui/libft/blob/main/ft_strchr.c)
