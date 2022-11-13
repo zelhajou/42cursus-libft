@@ -6,11 +6,25 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:29:47 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/09 15:29:47 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:55:30 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strcpy(char *dest, const char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 int	count_number(int n)
 {
@@ -43,6 +57,8 @@ char	*ft_itoa(int n)
 	nb = n;
 	number = count_number(n) - 1;
 	str = (char *)malloc(sizeof(char) * (count_number(n) + 1));
+	if (n == -2147483648)
+		return (ft_strcpy(str, "-2147483648"));
 	if (!str)
 		return (NULL);
 	if (n < 0)
