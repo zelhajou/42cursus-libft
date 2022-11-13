@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 22:55:32 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/04 17:16:39 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 14:45:13 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {	
-	char	*s1;
-	char	*s2;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
 	s1 = (unsigned char *)src;
 	s2 = (unsigned char *)dst;
