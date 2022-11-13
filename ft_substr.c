@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:41:59 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/13 01:34:14 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:54:01 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (s[++i])
 	{
 		if (i >= start && j < len)
-		{
-			substr[j] = s[i];
-			j++;
-		}
+			substr[j++] = s[i];
 	}
 	substr[j] = '\0';
 	return (substr);
