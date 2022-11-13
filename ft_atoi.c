@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:20:39 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/10/27 20:45:11 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:53:49 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 	ft_atoi() convert a string to an integer
 */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int			sign;
-	long long	i;
-	long long	r;
+	int		sign;
+	size_t	i;
+	size_t	res;
 
 	i = 0;
 	sign = 1;
-	r = 0;
-	while ((str[i] >= 7 && str[i] <= 13) || str[i] == 32)
+	res = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -33,8 +35,8 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10 + str[i] - '0';
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
-	return (sign * r);
+	return (sign * res);
 }
