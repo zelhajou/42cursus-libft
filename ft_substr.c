@@ -6,9 +6,18 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:41:59 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/09 00:58:04 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 01:34:14 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	substr() is used for string slicing. It can be used to extract a part of 
+	a string.
+
+	s:		The string from which to create the substring.
+	start:	The start index of the substring in the string ’s’.
+	len:	The maximum length of the substring.
+*/
 
 #include "libft.h"
 
