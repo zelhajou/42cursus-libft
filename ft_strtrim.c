@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 07:48:23 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/04 16:58:32 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:01:14 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	first = first_set(s1, set);
 	last = last_set(s1, set);
-	if (first >= last)
+	if (first > last)
 		return (ft_strdup(""));
 	ptr = (char *)malloc(sizeof(char) * ((last - first) + 2));
 	if (ptr == NULL)
@@ -85,3 +85,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+// int main()
+// {
+// 	char *str = ft_strtrim("abcdba", "acb");
+// 	printf("%s", str);
+// }
