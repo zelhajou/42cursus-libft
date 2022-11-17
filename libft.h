@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 22:53:36 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/10 15:51:41 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/17 14:17:10 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+# include <stdio.h>
+# include <string.h>
 
 /* Part 1 - Libc functions */
 
