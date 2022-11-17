@@ -32,7 +32,8 @@ SRCS = 	ft_isalpha.c	\
 		ft_strmapi.c	\
 		ft_striteri.c	\
 		ft_itoa.c	\
-
+		ft_lstadd_front	\
+		
 NAME = libft.a
 
 OBJS_DIR = objs/
