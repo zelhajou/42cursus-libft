@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: zakelhajoui <zakelhajoui@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:06:01 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/09 00:47:40 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 17:44:08 by zakelhajoui      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	**ft_free(char **str)
 	return (str);
 }
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -50,7 +50,7 @@ int	count_word(char const *s, char c)
 	return (j);
 }
 
-int	count_char(char const *s, char c)
+static int	count_char(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -92,14 +92,12 @@ char	**ft_split(char const *s, char c)
 		s += number_char;
 		i++;
 	}
-	ptr[i] = NULL;
-	return (ptr);
+	return (ptr[i] = NULL, ptr);
 }
 
 // int main()
 // {
-// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit.
-// Sed non risus. Suspendisse";
+// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed non risus. Suspendisse";
 // 	char **ptr;
 
 // 	ptr = ft_split(str, ' ');
@@ -110,6 +108,7 @@ char	**ft_split(char const *s, char c)
 // 		printf("%s\n", ptr[i]);
 // 		i++;
 // 	}
-// 	printf("%s\n", ptr[i]);
+	
+// 	system("leaks a.out");
 
 // }

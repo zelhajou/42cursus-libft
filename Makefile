@@ -32,7 +32,7 @@ SRCS = 	ft_isalpha.c	\
 		ft_strmapi.c	\
 		ft_striteri.c	\
 		ft_itoa.c	\
-		ft_lstadd_front	\
+		ft_lstadd_front.c	\
 		
 NAME = libft.a
 

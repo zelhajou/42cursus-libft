@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	first_set(const char *s1, const char *set)
+static int	first_set(const char *s1, const char *set)
 {
 	int	i;
 	int	c;
@@ -36,7 +36,7 @@ int	first_set(const char *s1, const char *set)
 	return (i);
 }
 
-int	last_set(const char *s1, const char *set)
+static int	last_set(const char *s1, const char *set)
 {
 	int	c;
 	int	j;
