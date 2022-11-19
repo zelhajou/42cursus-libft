@@ -6,9 +6,16 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 02:22:59 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:43:03 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:19:27 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Description : Outputs the string ’s’ to the given file descriptor.
+
+	s:	The string to output.
+	fd:	The file descriptor on which to write.
+*/
 
 #include "libft.h"
 

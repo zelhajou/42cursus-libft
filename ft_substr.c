@@ -6,13 +6,14 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:41:59 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:43:33 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:06:13 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	substr() is used for string slicing. It can be used to extract a part of 
-	a string.
+	Description : Allocates (with malloc(3)) and returns a substring from 
+	the string ’s’. The substring begins at index ’start’ and is of 
+	maximum size ’len’.
 
 	s:		The string from which to create the substring.
 	start:	The start index of the substring in the string ’s’.

@@ -6,9 +6,17 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:11:35 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:43:14 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:06:18 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Description : Allocates (with malloc(3)) and returns a new string, 
+	which is the result of the concatenation of ’s1’ and ’s2’.
+	
+	s1:	The prefix string.
+	s2:	The suffix string.
+*/
 
 #include "libft.h"
 

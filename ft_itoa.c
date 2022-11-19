@@ -6,10 +6,16 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:29:47 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:42:31 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:10:34 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Description : Allocates (with malloc(3)) and returns a string representing
+	the integer received as an argument. Negative numbers must be handled.
+
+	n:  the integer to convert.
+*/
 #include "libft.h"
 
 static int	count_number(long n)

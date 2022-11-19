@@ -6,9 +6,18 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 03:26:49 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:43:12 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:14:33 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Description : Applies the function ’f’ on each character of the string 
+	passed as argument, passing its index as first argument.
+	Each character is passed by address to ’f’ to be modified if necessary.
+
+	s:	The string on which to iterate.
+	f:	The function to apply to each character.
+*/
 
 #include "libft.h"
 

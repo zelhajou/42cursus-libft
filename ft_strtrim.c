@@ -6,9 +6,18 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 07:48:23 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:43:31 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:08:41 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Descriptin : Allocates (with malloc(3)) and returns a copy of ’s1’ with the 
+	characters specified in ’set’ removed from the beginning and the end of 
+	the string.
+
+	s1:		The string to be trimmed.
+	set:	The reference set of characters to trim.
+*/
 
 #include "libft.h"
 
@@ -85,9 +94,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char *str = ft_strtrim("abcdba", "acb");
-// 	printf("%s", str);
-// }
