@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 20:31:28 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/17 20:44:27 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 20:36:31 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if(!lst)
+	if (!lst)
 		return ;
 	del(lst->content);
 	free(lst);

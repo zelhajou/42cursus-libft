@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:00:21 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/17 17:45:41 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 20:38:17 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
-	return (new);	
+	return (new);
 }
-
-// int main()
-// {
-// 	t_list s;
-// 	//s.content = "hello";
-
-// 	t_list *ptr;
-
-	
-// 	char *str = "bye bye";
-// 	ptr = ft_lstnew(str);
-// 	// ptr = ft_lstnew(s.content);
-// 	printf("%p", ptr->content);
-// }

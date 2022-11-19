@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zakelhajoui <zakelhajoui@student.42.fr>    +#+  +:+       +#+        */
+/*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:06:01 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 17:44:08 by zakelhajoui      ###   ########.fr       */
+/*   Updated: 2022/11/19 20:40:02 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,21 +94,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (ptr[i] = NULL, ptr);
 }
-
-// int main()
-// {
-// 	char *str = "lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed non risus. Suspendisse";
-// 	char **ptr;
-
-// 	ptr = ft_split(str, ' ');
-// 	int i = 0;
-
-// 	while(ptr[i])
-// 	{
-// 		printf("%s\n", ptr[i]);
-// 		i++;
-// 	}
-	
-// 	system("leaks a.out");
-
-// }
