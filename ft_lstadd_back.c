@@ -6,9 +6,16 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:53:42 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 20:42:34 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/19 21:28:37 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Description : Adds the node ’new’ at the end of the list.
+
+	lst:  The address of a pointer to the first link of a list.
+	new:  The address of a pointer to the node to be added to the list.
+*/
 
 #include "libft.h"
 
