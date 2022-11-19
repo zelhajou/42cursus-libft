@@ -1,8 +1,5 @@
 # libft
 
-This project's the first project in 42 cursus and consists of coding basic C functions existing in the standard C library and others that not existing, this project aims to code your own C library regrouping usual functions that you'll be allowed to use in all your other projects.
-
-The project is divided in two parts :
 ## I. Mandatory part : 
 ### Part 1 - Libc functions :
 The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
@@ -61,3 +58,12 @@ There are three types of functions that exist in the string library:
 - [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putnbr_fd.c)
 
 ## II - Bonus part :
+- [ft_lstnew](https://github.com/zakelhajoui/libft/blob/main/ft_lstnew.c)
+- [ft_lstadd_front](https://github.com/zakelhajoui/libft/blob/main/ft_lstadd_front.c)
+- [ft_lstsize](https://github.com/zakelhajoui/libft/blob/main/ft_lstsize.c)
+- [ft_lstlast](https://github.com/zakelhajoui/libft/blob/main/ft_lstlast.c)
+- [ft_lstadd_back](https://github.com/zakelhajoui/libft/blob/main/ft_lstadd_back.c)
+- [ft_lstdelone](https://github.com/zakelhajoui/libft/blob/main/ft_lstdelone.c)
+- [ft_lstclear](https://github.com/zakelhajoui/libft/blob/main/ft_lstclear.c)
+- [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/ft_lstiter.c)
+
