@@ -7,3 +7,5 @@ objs/
 .vscode/settings.json
 test.c
 libft.a
+main.c
+main.c
