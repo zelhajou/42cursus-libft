@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:29:47 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 21:10:34 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/20 22:28:28 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 */
 #include "libft.h"
 
-static int	count_number(long n)
+static int	count_char(long n)
 {
 	int	i;
 
@@ -47,8 +47,8 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	nb = n;
-	number = count_number(n) - 1;
-	str = (char *)ft_calloc((count_number(n) + 1), sizeof(char));
+	number = count_char(n) - 1;
+	str = (char *)ft_calloc((count_char(n) + 1), sizeof(char));
 	if (!str)
 		return (NULL);
 	if (n < 0)
