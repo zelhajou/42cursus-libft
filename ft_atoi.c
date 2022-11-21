@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:20:39 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/21 23:11:44 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/21 23:13:14 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "libft.h"
 
-int	skip_space(int *i, const char *str)
+static int	skip_space(int *i, const char *str)
 {
 	int	sign;
 
