@@ -19,14 +19,12 @@ BSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c 
 OBJ = $(SRC:.c=.o)
 
 BOBJ = $(BSRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rc $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 	@echo "Libft Done !"
-
-bonus: all $(BOBJ)
-	ar -rc $(NAME) $(BOBJ)
 
 %.o: %.c $(HEADER)
 	$(CC) -c $(CFLAGS) $<
@@ -38,4 +36,6 @@ fclean: clean
 	rm -rf $(NAME) $(BOBJ)
 
 re: fclean all
- 
+
+bonus: all $(BOBJ)
+	ar -rc $(NAME) $(BOBJ)
