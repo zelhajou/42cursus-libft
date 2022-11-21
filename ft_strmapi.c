@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 01:03:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2022/11/19 21:13:03 by zelhajou         ###   ########.fr       */
+/*   Updated: 2022/11/21 02:54:27 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
+	if (!s || !f)
+		return (0);
 	i = 0;
 	str = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)
