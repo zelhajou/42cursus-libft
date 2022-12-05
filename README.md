@@ -4,7 +4,7 @@
 ### Part 1 - Libc functions :
 The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
-**ctype.h** : This header file defines functions that are used to check or transform characters.
+```ctype.h``` : This header file defines functions that are used to check or transform characters.
 
 Each functions is receives a character represented as an int, or EOF as an argument. Characters are often manipulated as integers.
 EOF normally has the value –1 and that some hardware architectures do not allow negative values to be stored in char variables. Therefore, the character-handling functions manipulate characters as integers.
@@ -18,7 +18,7 @@ EOF normally has the value –1 and that some hardware architectures do not allo
 | 6      | [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c)      |
 | 7      | [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)      |
 
-**string.h** : This header file is used to perform operations on the string
+```string.h``` : This header file is used to perform operations on the string
 
 There are three types of functions that exist in the string library:
 1. the `str` functions manipulate **null-terminated** sequences of characters.
@@ -35,7 +35,7 @@ There are three types of functions that exist in the string library:
 | 6      | [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/ft_strlcpy.c)      | [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/ft_memmove.c) |
 | 7      | [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/ft_strlcat.c)      | |
 
-**stdlib.h** : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
+```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
 | No     | Type conversion & memory allocation   |
 | ------ | ------------------- |
