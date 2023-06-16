@@ -1,4 +1,8 @@
 # [libft](https://github.com/zakelhajoui/libft/blob/main/en.subject.pdf)
+Libft is a library of various utility functions in C, created as a project for the 42 School curriculum. The library contains custom implementations of standard C library functions, as well as additional functions that can be useful for various programming tasks.
+
+
+
 
 ## I. Mandatory part : 
 ### Part 1 - Libc functions :
