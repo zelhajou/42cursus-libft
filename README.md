@@ -210,6 +210,315 @@ There are three types of functions that exist in the string library:
 | 6      | [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)      | [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memmove.c) |
 | 7      | [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c)      | |
 
+<table>
+<tr>
+<td> String-processing Functions </td> <td> Code </td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strlen](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlen.c)
+
+</td>
+<td>
+
+```c
+/*
+	strlen() - calculate the length of a string
+*/
+
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> String-processing Functions </td> <td> Code </td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strchr.c)
+
+</td>
+<td>
+
+```c
+/*
+	ft_strchr() returns a pointer to the first occurrence
+    of the character c in the string s.
+*/
+
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strrchr.c) 
+
+</td>
+<td>
+
+```c
+/*
+	ft_strrchr() returns a pointer to the last occurrence
+	of the character c in the string s
+*/
+
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
+{
+	int	size;
+
+	size = ft_strlen(s);
+	while (size >= 0)
+	{
+		if (s[size] == (char)c)
+			return ((char *)s + size);
+		size--;
+	}
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+ [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strnstr.c)
+
+</td>
+<td>
+
+```c
+/* 
+	ft_strnstr() Find the first substring in a length-limited string
+	big:	The string to be searched
+	little:	The string to search for
+	len:	the maximum number of characters to search
+*/
+
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	if (little[i] == '\0')
+		return ((char *) big);
+	while ((big[i] != '\0') && i < len)
+	{
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strncmp.c)  
+
+</td>
+<td>
+
+```c
+/*
+    ft_strcmp() compares the two strings s1 and s2. It returns an integer less
+	than, equal to, or greater than zero if s1 is found, respectively, 
+	to be less than, to match, or be greater than s2.
+	
+	ft_strncmp() is similar, except it only compares the first (at most) n bytes 
+	of s1 and s2.
+*/
+
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)  
+
+</td>
+<td>
+
+```c
+/*
+	ft_strlcpy() copies up to size - 1 characters from the NUL-terminated 
+	string src to dst, NUL-terminating the result.
+*/
+
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
+	while (src[i] != '\0' && i < size - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)  
+
+</td>
+<td>
+
+```c
+/*
+	ft_strlcpy() copies up to size - 1 characters from the NUL-terminated 
+	string src to dst, NUL-terminating the result.
+*/
+
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	len = ft_strlen(src);
+	if (size == 0)
+		return (len);
+	while (src[i] != '\0' && i < size - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (len);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c)  
+
+</td>
+<td>
+
+```c
+/*
+	ft_strlcat() appends the NUL-terminated string src to the end of dst.It will
+	append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+*/
+
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (i < dstsize && *dst)
+	{
+		dst++;
+		i++;
+	}
+	if (i == dstsize)
+		return (i + ft_strlen(src));
+	j = 0;
+	while (src[j])
+	{
+		if (j < dstsize - i - 1)
+			*dst ++ = src[j];
+		j++;
+	}
+	*dst = '\0';
+	return (i + j);
+}
+```
+
+</td>
+</tr>
+
+</table>
+
 ```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
 | No     | Type conversion & memory allocation   |
