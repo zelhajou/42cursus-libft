@@ -751,6 +751,147 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 | 2      | [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c)      |
 | 3      | [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c)      |
 
+
+<table>
+<tr>
+<td> Type conversion & memory allocation </td> <td> Code </td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_atoi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_atoi.c) 
+</td>
+<td>
+
+```c
+/*
+	ft_atoi() convert a string to an integer
+*/
+
+#include "libft.h"
+
+static int	skip_space(int *i, const char *str)
+{
+	int	sign;
+
+	sign = 1;
+	while ((str[*i] >= 9 && str[*i] <= 13) || str[*i] == 32)
+		(*i)++;
+	if (str[*i] == '-' || str[*i] == '+')
+	{
+		if (str[*i] == '-')
+			sign *= -1;
+		(*i)++;
+	}
+	return (sign);
+}
+
+int	ft_atoi(const char *str)
+{
+	int			sign;
+	int			i;
+	long long	res;
+	long long	prev;
+	long long	tmp;
+
+	i = 0;
+	res = 0;
+	sign = skip_space(&i, str);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		prev = res;
+		res = res * 10 + str[i] - '0';
+		tmp = res / 10;
+		if (tmp != prev)
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
+		i++;
+	}
+	return (sign * res);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c)  
+</td>
+<td>
+
+```c
+/*
+	ft_calloc() — Allocates the space for elements of an array. 
+	Initializes the elements to zero and returns a pointer to the memory.
+*/
+
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*ptr;
+
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, (nmemb * size));
+	return (ptr);
+}
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c)
+</td>
+<td>
+
+```c
+/*
+	strdup() returns a pointer to a new string which is a duplicate 
+	of the string s.  Memory for the new string is obtained with malloc.
+*/
+
+#include "libft.h"
+
+char	*ft_strdup(const char *src)
+{
+	size_t	i;
+	size_t	size;
+	char	*str;
+
+	i = 0;
+	size = ft_strlen(src);
+	str = malloc(size + 1);
+	if (str == NULL)
+		return (NULL);
+	while (src[i])
+	{
+		str[i] = src[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+```
+
+</td>
+</tr>
+
+
+</table>
+
   ### Part 2 - Additional functions :
   
   | No     | Additional functions |
