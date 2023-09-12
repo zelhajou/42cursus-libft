@@ -745,13 +745,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 ```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
-| No     | Type conversion & memory allocation   |
-| ------ | ------------------- |
-| 1      | [ft_atoi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_atoi.c)      |
-| 2      | [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c)      |
-| 3      | [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c)      |
-
-
 <table>
 <tr>
 <td> Type conversion & memory allocation </td> <td> Code </td>
