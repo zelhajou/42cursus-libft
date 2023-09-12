@@ -200,16 +200,6 @@ There are three types of functions that exist in the string library:
 2. the `strn` functions manipulate sequences of **non-null characters**.
 3. the `mem` functions manipulate sequences of arbitrary characters without regard to the **null character**.
 
-| No     | String-processing Functions  |  Memory Functions |
-| ------ | ------------------- | -------------- |
-| 1      | [ft_strlen](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlen.c)        | [ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c) |
-| 2      | [ft_strchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strchr.c)        | [ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcmp.c) |
-| 3      | [ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strrchr.c)      | [ft_memchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memchr.c) |
-| 4      | [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strnstr.c)      | [ft_memset](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memset.c) |
-| 5      | [ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strncmp.c)      | [ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcpy.c) |
-| 6      | [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)      | [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memmove.c) |
-| 7      | [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c)      | |
-
 <table>
 <tr>
 <td> String-processing Functions </td> <td> Code </td>
