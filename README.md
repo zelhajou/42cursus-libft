@@ -242,40 +242,6 @@ size_t	ft_strlen(const char *s)
 ```
 
 </td>
-
-<td> 
- 
-[ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_bzero() erases the data in the n bytes of the memory starting at 
-	the location pointed to by s, by writing zeros (bytes containing '\0') 
-	to that area.
-*/
-
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
-{
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
-}
-```
-
-</td>
-
 </tr>
 
 
@@ -549,6 +515,206 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 </tr>
 
 </table>
+
+
+<table>
+<tr>
+<td> Memory Functions </td> <td> Code </td>
+</tr>
+
+<tr>
+
+<td> 
+ 
+[ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c)
+
+</td>
+<td>
+
+```c
+/*
+	ft_bzero() erases the data in the n bytes of the memory starting at 
+	the location pointed to by s, by writing zeros (bytes containing '\0') 
+	to that area.
+*/
+
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		str[i] = '\0';
+		i++;
+	}
+}
+```
+
+</td>
+</tr>
+
+<tr>
+
+<td> 
+ 
+[ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcmp.c)
+
+</td>
+<td>
+
+```c
+/*
+       The memcmp() function compares the first n bytes (each interpreted 
+       as unsigned char) of the memory areas s1 and s2.
+*/
+
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	*obj1;
+	unsigned char	*obj2;
+
+	i = 0;
+	obj1 = (unsigned char *)s1;
+	obj2 = (unsigned char *)s2;
+	while (i < n)
+	{
+		if (obj1[i] != obj2[i])
+			return (obj1[i] - obj2[i]);
+		i++;
+	}
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+
+<td> 
+ 
+[ft_memchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memchr.c)
+
+</td>
+<td>
+
+```c
+/*
+	ft_memchr() scans the initial n bytes of the memory area pointed to by s 
+	for the first instance of c.  Both c and the bytes of the memory area 
+	pointed to by s are interpreted as unsigned char.
+*/
+
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*obj;
+
+	i = 0;
+	obj = (unsigned char *)s;
+	while (i < n)
+	{
+		if (obj[i] == (unsigned char)c)
+			return (&obj[i]);
+		i++;
+	}
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+
+<td> 
+ 
+[ft_memset](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memset.c)
+
+</td>
+<td>
+
+```c
+/* 
+	ft_memset() sets the first len bytes of the memory area pointed to by 
+	s to the value specified by c
+*/
+
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*obj;
+
+	i = 0;
+	obj = (unsigned char *)s;
+	while (i < n)
+	{
+		obj[i] = (unsigned char)c;
+		i++;
+	}
+	return (obj);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcpy.c)
+
+</td>
+<td>
+
+```c
+/* 
+	ft_memcpy() function copies n bytes from memory area src to memory area dest
+*/
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	size_t			i;
+	unsigned char	*s1;
+	unsigned char	*s2;
+
+	i = 0;
+	if (!dst && !src)
+		return (0);
+	s1 = (unsigned char *)dst;
+	s2 = (unsigned char *)src;
+	if (s1 == s2)
+		return (s1);
+	while (i < n)
+	{
+		s1[i] = s2[i];
+		i++;
+	}
+	return (s1);
+}
+```
+
+</td>
+</tr>
+
+
+</table>
+
+
 
 ```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
