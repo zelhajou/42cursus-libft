@@ -244,9 +244,6 @@ size_t	ft_strlen(const char *s)
 </td>
 </tr>
 
-<tr>
-<td> String-processing Functions </td> <td> Code </td>
-</tr>
 
 <tr>
 <td> 
