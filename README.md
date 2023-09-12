@@ -1,4 +1,4 @@
-# [libft](https://github.com/zakelhajoui/libft/blob/main/en.subject.pdf)
+# [libft](https://github.com/zakelhajoui/libft/blob/main/libft/en.subject.pdf)
 Libft is a library of various utility functions in C, created as a project for the 42 School curriculum. The library contains custom implementations of standard C library functions, as well as additional functions that can be useful for various programming tasks.
 
 
@@ -21,7 +21,7 @@ EOF normally has the value –1 and that some hardware architectures do not allo
 <tr>
 <td> 
  
-[ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/ft_isalpha.c)  
+[ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalpha.c)  
 
 </td>
 <td>
@@ -45,7 +45,7 @@ int	ft_isalpha(int c)
 <tr>
 <td> 
  
-[ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/ft_isdigit.c)
+[ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isdigit.c)
 
 </td>
 <td>
@@ -69,7 +69,7 @@ int	ft_isdigit(int c)
 <tr>
 <td> 
  
-[ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/ft_isalnum.c)
+[ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalnum.c)
 
 </td>
 <td>
@@ -95,7 +95,7 @@ int	ft_isalnum(int c)
 <tr>
 <td> 
  
-[ft_isascii](https://github.com/zakelhajoui/libft/blob/main/ft_isascii.c) 
+[ft_isascii](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isascii.c) 
 
 </td>
 <td>
@@ -121,7 +121,7 @@ int	ft_isascii(int c)
 <tr>
 <td> 
  
-[ft_isprint](https://github.com/zakelhajoui/libft/blob/main/ft_isprint.c)
+[ft_isprint](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isprint.c)
 
 </td>
 <td>
@@ -145,7 +145,7 @@ int	ft_isprint(int c)
 <tr>
 <td> 
  
-[ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c) 
+[ft_tolower](https://github.com/zakelhajoui/libft/blob/main/libft/ft_tolower.c) 
 
 </td>
 <td>
@@ -169,7 +169,7 @@ int	ft_tolower(int c)
 <tr>
 <td> 
  
-[ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)
+[ft_toupper](https://github.com/zakelhajoui/libft/blob/main/libft/ft_toupper.c)
 
 </td>
 <td>
@@ -202,49 +202,49 @@ There are three types of functions that exist in the string library:
 
 | No     | String-processing Functions  |  Memory Functions |
 | ------ | ------------------- | -------------- |
-| 1      | [ft_strlen](https://github.com/zakelhajoui/libft/blob/main/ft_strlen.c)        | [ft_bzero](https://github.com/zakelhajoui/libft/blob/main/ft_bzero.c) |
-| 2      | [ft_strchr](https://github.com/zakelhajoui/libft/blob/main/ft_strchr.c)        | [ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/ft_memcmp.c) |
-| 3      | [ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/ft_strrchr.c)      | [ft_memchr](https://github.com/zakelhajoui/libft/blob/main/ft_memchr.c) |
-| 4      | [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/ft_strnstr.c)      | [ft_memset](https://github.com/zakelhajoui/libft/blob/main/ft_memset.c) |
-| 5      | [ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/ft_strncmp.c)      | [ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/ft_memcpy.c) |
-| 6      | [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/ft_strlcpy.c)      | [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/ft_memmove.c) |
-| 7      | [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/ft_strlcat.c)      | |
+| 1      | [ft_strlen](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlen.c)        | [ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c) |
+| 2      | [ft_strchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strchr.c)        | [ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcmp.c) |
+| 3      | [ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strrchr.c)      | [ft_memchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memchr.c) |
+| 4      | [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strnstr.c)      | [ft_memset](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memset.c) |
+| 5      | [ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strncmp.c)      | [ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcpy.c) |
+| 6      | [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)      | [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memmove.c) |
+| 7      | [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c)      | |
 
 ```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
 | No     | Type conversion & memory allocation   |
 | ------ | ------------------- |
-| 1      | [ft_atoi](https://github.com/zakelhajoui/libft/blob/main/ft_atoi.c)      |
-| 2      | [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/ft_calloc.c)      |
-| 3      | [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/ft_strdup.c)      |
+| 1      | [ft_atoi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_atoi.c)      |
+| 2      | [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c)      |
+| 3      | [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c)      |
 
   ### Part 2 - Additional functions :
   
   | No     | Additional functions |
 | ------ | ------------------- |
-| 1      | [ft_substr](https://github.com/zakelhajoui/libft/blob/main/ft_substr.c)      |
-| 2      | [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/ft_strjoin.c)    |
-| 3      | [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/ft_strtrim.c)    |
-| 4      | [ft_split](https://github.com/zakelhajoui/libft/blob/main/ft_split.c)        |
-| 5      | [ft_itoa](https://github.com/zakelhajoui/libft/blob/main/ft_itoa.c)          |
-| 6      | [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/ft_strmapi.c)    |
-| 7      | [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/ft_striteri.c)  |
-| 8      | [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putchar_fd.c)   |
-| 9      | [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putstr_fd.c)     |
-| 10      | [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putendl_fd.c)  |
-| 11      | [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/ft_putnbr_fd.c)    |
+| 1      | [ft_substr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_substr.c)      |
+| 2      | [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strjoin.c)    |
+| 3      | [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strtrim.c)    |
+| 4      | [ft_split](https://github.com/zakelhajoui/libft/blob/main/libft/ft_split.c)        |
+| 5      | [ft_itoa](https://github.com/zakelhajoui/libft/blob/main/libft/ft_itoa.c)          |
+| 6      | [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strmapi.c)    |
+| 7      | [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/libft/ft_striteri.c)  |
+| 8      | [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putchar_fd.c)   |
+| 9      | [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putstr_fd.c)     |
+| 10      | [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putendl_fd.c)  |
+| 11      | [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putnbr_fd.c)    |
 
 ## II - Bonus part :
 
   | No     | Bonus part |
 | ------ | ------------------- |
-| 1      | [ft_lstnew](https://github.com/zakelhajoui/libft/blob/main/ft_lstnew.c) |
-| 2      | [ft_lstadd_front](https://github.com/zakelhajoui/libft/blob/main/ft_lstadd_front.c)    |
-| 3      | [ft_lstsize](https://github.com/zakelhajoui/libft/blob/main/ft_lstsize.c)   |
-| 4      | [ft_lstlast](https://github.com/zakelhajoui/libft/blob/main/ft_lstlast.c)        |
-| 5      | [ft_lstadd_back](https://github.com/zakelhajoui/libft/blob/main/ft_lstadd_back.c)          |
-| 6      | [ft_lstdelone](https://github.com/zakelhajoui/libft/blob/main/ft_lstdelone.c)    |
-| 7      | [ft_lstclear](https://github.com/zakelhajoui/libft/blob/main/ft_lstclear.c)  |
-| 8      | [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/ft_lstiter.c)   |
+| 1      | [ft_lstnew](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstnew.c) |
+| 2      | [ft_lstadd_front](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_front.c)    |
+| 3      | [ft_lstsize](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstsize.c)   |
+| 4      | [ft_lstlast](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstlast.c)        |
+| 5      | [ft_lstadd_back](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_back.c)          |
+| 6      | [ft_lstdelone](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstdelone.c)    |
+| 7      | [ft_lstclear](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstclear.c)  |
+| 8      | [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstiter.c)   |
 
 
