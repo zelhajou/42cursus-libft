@@ -12,15 +12,6 @@ The term "**libc**" is commonly used as a shorthand for the "standard C library"
 
 Each functions is receives a character represented as an int, or EOF as an argument. Characters are often manipulated as integers.
 EOF normally has the value –1 and that some hardware architectures do not allow negative values to be stored in char variables. Therefore, the character-handling functions manipulate characters as integers.
-| No     | Character-handling  |   |
-| ------ | ------------------- |  --- |
-| 1      | [ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/ft_isalpha.c)      |  |
-| 2      | [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/ft_isdigit.c)      |   |
-| 3      | [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/ft_isalnum.c)      |   |
-| 4      | [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/ft_isascii.c)      |   |
-| 5      | [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/ft_isprint.c)      |   |
-| 6      | [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c)      |   |
-| 7      | [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)      |  |
 
 
 <table>
@@ -75,7 +66,129 @@ int	ft_isdigit(int c)
 </td>
 </tr>
 
+<tr>
+<td> 
+ 
+[ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/ft_isalnum.c)
 
+</td>
+<td>
+
+```c
+/*
+	ft_isalnum() checks for an alphanumeric character; 
+	it is equivalent to (ft_isalpha(c) || ft_isdigit(c)).
+*/
+
+int	ft_isalnum(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
+		return (1);
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_isascii](https://github.com/zakelhajoui/libft/blob/main/ft_isascii.c) 
+
+</td>
+<td>
+
+```c
+/*
+	ft_isascii() checks whether c is a 7-bit unsigned char value that fits into 
+	the ASCII character set.
+*/
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}
+
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_isprint](https://github.com/zakelhajoui/libft/blob/main/ft_isprint.c)
+
+</td>
+<td>
+
+```c
+/*
+	ft_isprint() checks for any printable character including space.
+*/
+
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_tolower](https://github.com/zakelhajoui/libft/blob/main/ft_tolower.c) 
+
+</td>
+<td>
+
+```c
+/*
+	ft_tolower() converts the letter c to lower case, if possible.
+*/
+
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td> 
+ 
+[ft_toupper](https://github.com/zakelhajoui/libft/blob/main/ft_toupper.c)
+
+</td>
+<td>
+
+```c
+/*
+	ft_toupper() converts the letter c to upper case, if possible.
+*/
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+```
+
+</td>
+</tr>
 
 
 </table>
