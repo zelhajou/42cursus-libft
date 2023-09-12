@@ -14,10 +14,10 @@ Each functions is receives a character represented as an int, or EOF as an argum
 EOF normally has the value –1 and that some hardware architectures do not allow negative values to be stored in char variables. Therefore, the character-handling functions manipulate characters as integers.
 
 <details>
-<summary>
+
+<summary> Character-handling 
 
 [ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalpha.c), [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isdigit.c), [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalnum.c), [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isascii.c), [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isprint.c), [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/libft/ft_tolower.c), [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/libft/ft_toupper.c)
-
 
 
 </summary>
