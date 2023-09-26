@@ -213,7 +213,12 @@ There are three types of functions that exist in the string library:
 2. the `strn` functions manipulate sequences of **non-null characters**.
 3. the `mem` functions manipulate sequences of arbitrary characters without regard to the **null character**.
 
-<table>
+
+<details>
+	<summary>
+String-processing Functions	
+	</summary>
+	<table>
 <tr>
 <td> String-processing Functions </td> <td> Code </td>
 </tr>
@@ -519,8 +524,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 </table>
 
+</details>
 
-<table>
+
+<details>
+	<summary>
+Memory Functions	
+	</summary>
+
+ <table>
 <tr>
 <td> Memory Functions </td> <td> Code </td>
 </tr>
@@ -754,11 +766,17 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 </table>
 
+</details>
+
 
 
 ```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
 
-<table>
+<details>
+	<summary>
+		Type conversion & memory allocation 
+	</summary>
+ <table>
 <tr>
 <td> Type conversion & memory allocation </td> <td> Code </td>
 </tr>
@@ -897,6 +915,9 @@ char	*ft_strdup(const char *src)
 
 
 </table>
+
+</details>
+
 
   ### Part 2 - Additional functions :
   
