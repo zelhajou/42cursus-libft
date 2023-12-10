@@ -1,10 +1,7 @@
-![42_libft_banner_new](https://github.com/zelhajou/libft/assets/39954629/209bedbc-e88b-452b-b6bf-abcc77cb04e5)
+![ascii-text-art (3)](https://github.com/zelhajou/libft/assets/39954629/7506e91d-abf9-4efb-8651-f1a9859af7d4)
 
-# [libft](https://github.com/zakelhajoui/libft/blob/main/libft/en.subject.pdf)
+## Overview
 Libft is a library of various utility functions in C, created as a project for the 42 School curriculum. The library contains custom implementations of standard C library functions, as well as additional functions that can be useful for various programming tasks.
-
-
-
 
 ## I. Mandatory part : 
 ### Part 1 - Libc functions :
