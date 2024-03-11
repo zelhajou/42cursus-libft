@@ -952,3 +952,6 @@ char	*ft_strdup(const char *src)
 | 8      | [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstiter.c)   |
 
 
+## Resources
+
+- [Makefile](https://github.com/n1kito/Makefile)
