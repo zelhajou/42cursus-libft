@@ -4,11 +4,11 @@
 
 </div>
 
-## Overview
+# Overview
 Libft is a library of various utility functions in C, created as a project for the 42 School curriculum. The library contains custom implementations of standard C library functions, as well as additional functions that can be useful for various programming tasks.
 
-## I. Mandatory part : 
-### Part 1 - Libc functions :
+# I. Mandatory part : 
+## Part 1 - Libc functions :
 The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
 ```ctype.h``` : This header file defines functions that are used to check or transform characters.
@@ -922,7 +922,7 @@ char	*ft_strdup(const char *src)
 </details>
 
 
-  ### Part 2 - Additional functions :
+## Part 2 - Additional functions :
   
   | No     | Additional functions |
 | ------ | ------------------- |
@@ -938,7 +938,7 @@ char	*ft_strdup(const char *src)
 | 10      | [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putendl_fd.c)  |
 | 11      | [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putnbr_fd.c)    |
 
-## II - Bonus part :
+# II - Bonus part :
 
   | No     | Bonus part |
 | ------ | ------------------- |
@@ -952,13 +952,13 @@ char	*ft_strdup(const char *src)
 | 8      | [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstiter.c)   |
 
 
-## Resources
+# Resources
 
 - [Makefile](https://github.com/n1kito/Makefile)
 
-## Notes
+# Notes
 
-### **Computer Architecture:** 
+## **Computer Architecture:** 
 
 - Is how processor is designed to perform tasks and different architectures are good at different tasks.
 
@@ -980,13 +980,13 @@ There are tow main types of **Primary storage : RAM - ROM**
     - A piece of output data : the return value.
 - **Parameters** Values that a main program sends to subprograms for them to use.
 
-#### **RAM :**
+### **RAM :**
 
 Ram is a part of the main memory in a computer system.
 
 When a program is loaded, it is copied from **secondary storage**, Such as a hard-disk. Any data is associated with the program will also be stored in **RAM** so that the **CPU** can access both the data and instructions
 
-#### **The units of a data storage :**
+### **The units of a data storage :**
 
 **Computer uses electronic circuits etched onto computer chips to store data and instructions.**
 
@@ -1000,13 +1000,13 @@ There i a number system that only uses the two values 1 and 0. it is called the 
 
 These 8 bits together are called a byte.
 
-### Data Storage
+## Data Storage
 
 Recall that the most basic unit of memory, the bit, has two possible states, **“on” or “off”**. If we used one bit to store a number, we could use each different state to represent a different number. For example, a bit could be used to represent the numbers 0, when the bit is off, and 1, when the bit is on.
 
 We will need to store numbers much larger than 1; to do that we need more bits.
 
-## **Numbers :**
+### **Numbers :**
 
 If we use two bits together to store a number, each bit has two possible states, so there are four possible combined states:
 
@@ -1067,7 +1067,7 @@ we now check 14 against the next column value
 |---|---|---|---|---|---|---|---|
 |1|0|0|0|1|1|1|0|
 
-## **Characters :**
+### **Characters :**
 
 Text is stored on a computer by first converting each character to an integer and then storing the integer.
 
@@ -1081,7 +1081,7 @@ The conversion of letters to numbers is called an encoding. the encoding used in
 ![Untitled 2](https://github.com/user-attachments/assets/af4698a4-9051-4ed2-b25d-eb4129c365c6)
 
 
-##### **Overflow errors**
+### **Overflow errors**
 
 If we are working with 8-bit numbers and all we can store is 8 bits, the following problem might occur.For example, if we add these two 8-bit numbers:
 
@@ -1097,7 +1097,7 @@ The largest value we can store in 8 bits is 11111111, or 255 in decimal. So the 
 
 [7.4 Computer Memory](https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html)
 
-## The problem with overflow :
+### The problem with overflow :
 
 If you have an unsigned int number at 255, and you increment it, you’ll get 256 in return. As expected. If you have an unsigned char number at 255, and you increment it, you’ll get 0 in return. It resets starting from the initial possible value.
 
