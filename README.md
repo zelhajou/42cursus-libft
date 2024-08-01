@@ -1108,4 +1108,13 @@ If you have an unsigned char number at 255 and you add 10 to it, you’ll get th
 C has many in-built functions which can make our work easier and code readable. Inbuilt functions are already defined in C and could be directly used in the program. These functions are grouped in a library, which can be accessed by including those header files in our program.
 
 
+-----
+
+| | |
+|-|-|
+| ![Pasted image 20230925130344](https://github.com/user-attachments/assets/cbf64f9d-268d-4924-afbe-f69d9ed3bf26) | ![Pasted image 20230925130415](https://github.com/user-attachments/assets/7e76893e-a17c-4fb9-a248-773602dbeccf) |
+
+
+
+ 
 
