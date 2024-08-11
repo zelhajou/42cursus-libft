@@ -1131,18 +1131,11 @@ If you have an unsigned char number at 255 and you add 10 to it, you’ll get th
 ![hexadecimal](https://github.com/user-attachments/assets/2c517535-2ecc-460d-bfcc-0526cf4c3d6d)
 
 
+### Bitwise Operations
 
+![bitwise-operations](https://github.com/user-attachments/assets/4b96b58a-9dcf-4341-9d3b-8ca3f65717b4)
 
-| | |
-|-|-|
-| ![Pasted image 20230925130344](https://github.com/user-attachments/assets/cbf64f9d-268d-4924-afbe-f69d9ed3bf26) | ![Pasted image 20230925130415](https://github.com/user-attachments/assets/7e76893e-a17c-4fb9-a248-773602dbeccf) |
+![bit-tricks](https://github.com/user-attachments/assets/96ab5a3b-d312-4386-b834-af1a2fd7c83f)
 
-----
-
-
-
-
-
-
- 
+![bit-flags](https://github.com/user-attachments/assets/66562cc6-0ad7-4746-af76-d1a067d7266e)
 
