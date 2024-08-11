@@ -1029,8 +1029,11 @@ The settings for a series of bits are typically written using a 0 for off and a 
 ![integers](https://github.com/user-attachments/assets/af62643e-0fa1-42a6-bbe6-1dfd1844a571)
 
 Integers are commonly stored using a word of memory, which is 4 bytes or 32 bits, so integers from 0 up to 4,294,967,295
-
 in the decimal system we are used to using 10 symbols or values : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+![bases](https://github.com/user-attachments/assets/ddd65123-65bc-4489-b364-5578b1e16969)
+
+
 
 we use the symbols to write numbers
 
@@ -1076,10 +1079,9 @@ we now check 14 against the next column value
 |---|---|---|---|---|---|---|---|
 |1|0|0|0|1|1|1|0|
 
-![signed-integers](https://github.com/user-attachments/assets/9321499a-f97e-46ca-bffe-ca53af9497fa)
-
 ![little-big-endian](https://github.com/user-attachments/assets/2499a68c-bd14-4e6a-a522-4a269b3900db)
 
+![signed-integers](https://github.com/user-attachments/assets/9321499a-f97e-46ca-bffe-ca53af9497fa)
 
 
 ### **Characters :**
@@ -1110,7 +1112,6 @@ In this example, we tried to add 11000110 (198 in decimal) and 11100011 (227 in 
 
 The largest value we can store in 8 bits is 11111111, or 255 in decimal. So the reason for the overflow error is that 425 is too large a number to store in 8 bits.
 
-
 [7.4 Computer Memory](https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html)
 
 ### The problem with overflow :
@@ -1121,14 +1122,16 @@ If you have an unsigned char number at 255 and you add 10 to it, you’ll get th
 
 ![integer-overflow](https://github.com/user-attachments/assets/f7ebb7af-98d9-4b36-b132-9fbba2460606)
 
+![big-integers](https://github.com/user-attachments/assets/08902d8e-80b5-42f7-82b6-fd3b65f45256)
+
+![32-bit-small](https://github.com/user-attachments/assets/65f51eb6-4252-4499-ad01-ad6bebfee196)
+
+### Hexadecimal
+
+![hexadecimal](https://github.com/user-attachments/assets/2c517535-2ecc-460d-bfcc-0526cf4c3d6d)
 
 
-**Library Functions :**
 
-C has many in-built functions which can make our work easier and code readable. Inbuilt functions are already defined in C and could be directly used in the program. These functions are grouped in a library, which can be accessed by including those header files in our program.
-
-
------
 
 | | |
 |-|-|
