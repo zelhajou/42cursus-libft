@@ -1139,3 +1139,10 @@ If you have an unsigned char number at 255 and you add 10 to it, you’ll get th
 
 ![bit-flags](https://github.com/user-attachments/assets/66562cc6-0ad7-4746-af76-d1a067d7266e)
 
+
+### Memory allocation
+
+![memory-allocation (1)](https://github.com/user-attachments/assets/020582e4-3403-4d16-aa37-a51ed9640616)
+
+
+
