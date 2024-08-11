@@ -1000,6 +1000,10 @@ There i a number system that only uses the two values 1 and 0. it is called the 
 
 These 8 bits together are called a byte.
 
+![bytes-not-bits](https://github.com/user-attachments/assets/3a58d4d1-d5b1-4ead-8a70-0107b8948f91)
+
+![many-meanings](https://github.com/user-attachments/assets/05a48a7a-2c20-4c26-8b93-4256c4c2f115)
+
 ## Data Storage
 
 Recall that the most basic unit of memory, the bit, has two possible states, **“on” or “off”**. If we used one bit to store a number, we could use each different state to represent a different number. For example, a bit could be used to represent the numbers 0, when the bit is off, and 1, when the bit is on.
@@ -1113,6 +1117,11 @@ C has many in-built functions which can make our work easier and code readable. 
 | | |
 |-|-|
 | ![Pasted image 20230925130344](https://github.com/user-attachments/assets/cbf64f9d-268d-4924-afbe-f69d9ed3bf26) | ![Pasted image 20230925130415](https://github.com/user-attachments/assets/7e76893e-a17c-4fb9-a248-773602dbeccf) |
+
+----
+
+
+
 
 
 
