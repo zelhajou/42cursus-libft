@@ -1002,6 +1002,9 @@ These 8 bits together are called a byte.
 
 ![bytes-not-bits](https://github.com/user-attachments/assets/3a58d4d1-d5b1-4ead-8a70-0107b8948f91)
 
+![bytes](https://github.com/user-attachments/assets/e2e83ed6-7f40-4dfa-9f33-755a030f45a8)
+
+
 ![many-meanings](https://github.com/user-attachments/assets/05a48a7a-2c20-4c26-8b93-4256c4c2f115)
 
 ## Data Storage
@@ -1073,6 +1076,7 @@ we now check 14 against the next column value
 
 ### **Characters :**
 
+
 Text is stored on a computer by first converting each character to an integer and then storing the integer.
 
 Example : to store the letter ‘A’, we will actually store the number 65; ‘B’ is 66 …
@@ -1081,8 +1085,7 @@ A letter is usually stored using a single byte (8 bits ) Each letter is assigned
 
 The conversion of letters to numbers is called an encoding. the encoding used in the examples above is called **[ASCII](https://www.ascii-code.com/)**
 
-
-![Untitled 2](https://github.com/user-attachments/assets/af4698a4-9051-4ed2-b25d-eb4129c365c6)
+![ascii (1)](https://github.com/user-attachments/assets/02d58747-f600-42d9-853c-97539fa0147a)
 
 
 ### **Overflow errors**
@@ -1099,13 +1102,18 @@ In this example, we tried to add 11000110 (198 in decimal) and 11100011 (227 in 
 
 The largest value we can store in 8 bits is 11111111, or 255 in decimal. So the reason for the overflow error is that 425 is too large a number to store in 8 bits.
 
+
 [7.4 Computer Memory](https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html)
 
 ### The problem with overflow :
 
 If you have an unsigned int number at 255, and you increment it, you’ll get 256 in return. As expected. If you have an unsigned char number at 255, and you increment it, you’ll get 0 in return. It resets starting from the initial possible value.
 
-If you have an unsigned char number at 255 and you add 10 to it, you’ll get the number 9:
+If you have an unsigned char number at 255 and you add 10 to it, you’ll get the number 9
+
+![integer-overflow](https://github.com/user-attachments/assets/f7ebb7af-98d9-4b36-b132-9fbba2460606)
+
+
 
 **Library Functions :**
 
