@@ -11,954 +11,194 @@ Libft is a library of various utility functions in C, created as a project for t
 ## Part 1 - Libc functions :
 The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
-```ctype.h``` : This header file defines functions that are used to check or transform characters.
+**Character-handling functions**
+
+The character-handling functions are used to check or transform characters. They are used to determine whether a character is a letter, a digit, a space, or a punctuation mark, and to convert a letter to uppercase or lowercase.
+
+| Function | Description |
+| --- | --- |
+| [ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalpha.c) | checks for an alphabetic character |
+| [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isdigit.c) | checks for a digit (0 through 9) |
+| [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalnum.c) | checks for an alphanumeric character; it is equivalent to (ft_isalpha(c) || ft_isdigit(c)) |
+| [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isascii.c) | checks whether c is a 7-bit unsigned char value that fits into the ASCII character set |
+| [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isprint.c) | checks for any printable character including space |
+| [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/libft/ft_tolower.c) | converts the letter c to lower case, if possible |
+| [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/libft/ft_toupper.c) | converts the letter c to upper case, if possible |
+
+In the C programming language, the functions in the character-handling library are used to check or transform characters. These functions are used to determine whether a character is a letter, a digit, a space, or a punctuation mark, and to convert a letter to uppercase or lowercase.
+
+```ctype.h``` : This header file is used to perform operations on characters.
 
 Each functions is receives a character represented as an int, or EOF as an argument. Characters are often manipulated as integers.
 EOF normally has the value –1 and that some hardware architectures do not allow negative values to be stored in char variables. Therefore, the character-handling functions manipulate characters as integers.
 
-<details>
 
-<summary> Character-handling 
+**String-handling functions** :
 
-[ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalpha.c), [ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isdigit.c), [ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalnum.c), [ft_isascii](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isascii.c), [ft_isprint](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isprint.c), [ft_tolower](https://github.com/zakelhajoui/libft/blob/main/libft/ft_tolower.c), [ft_toupper](https://github.com/zakelhajoui/libft/blob/main/libft/ft_toupper.c)
+The string-handling functions are used to manipulate strings. They are used to copy strings, concatenate strings, compare strings, and search for substrings in strings.
 
+| Function | Description |
+| --- | --- |
+| [ft_strlen](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlen.c) | calculates the length of a string |
+| [ft_strchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strchr.c) | returns a pointer to the first occurrence of the character c in the string s |
+| [ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strrchr.c) | returns a pointer to the last occurrence of the character c in the string s |
+| [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strnstr.c) | finds the first occurrence of the substring needle in the string haystack, where not more than len characters are searched |
+| [ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strncmp.c) | compares the two strings s1 and s2. It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2 |
+| [ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c) | copies up to size - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result |
+| [ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c) | appends the NUL-terminated string src to the end of dst. It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result |
 
-</summary>
 
-<table>
-<tr>
-<td> Character-handling  </td> <td> Code </td>
-</tr>
-<tr>
-<td> 
- 
-[ft_isalpha](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalpha.c)  
+In the C programming language, the functions in the string-handling library are used to manipulate strings. These functions are used to copy strings, concatenate strings, compare strings, and search for substrings in strings.
 
-</td>
-<td>
+```string.h``` : This header file is used to perform operations on strings.
 
-```c
-/*
-	ft_isalpha() checks for an alphabetic character
-*/
+There are five types of string-handling functions:
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
-```
+1. the `str` functions manipulate sequences of characters with a **null character** at the end.
+2. the `strn` functions manipulate sequences of characters with a **specified length**.
+3. the `strl` functions manipulate sequences of characters with a **specified length** and a **null character** at the end.
+4. the `strr` functions manipulate sequences of characters with a **null character** at the end, starting from the **right**.
+5. the `mem` functions manipulate sequences of characters without a **null character** at the end.
 
-</td>
-</tr>
+**Memory functions** :
 
-<tr>
-<td> 
- 
-[ft_isdigit](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isdigit.c)
+The memory functions are used to manipulate memory. They are used to copy memory, compare memory, and search for memory.
 
-</td>
-<td>
+| Function | Description |
+| --- | --- |
+| [ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c) | erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area |
+| [ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcmp.c) | compares the first n bytes (each interpreted as unsigned char) of the memory areas s1 and s2 |
+| [ft_memchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memchr.c) | scans the initial n bytes of the memory area pointed to by s for the first instance of c |
+| [ft_memset](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memset.c) | sets the first len bytes of the memory area pointed to by s to the value specified by c |
+| [ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcpy.c) | copies n bytes from memory area src to memory area dest |
+| [ft_memmove](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memmove.c) | copies len bytes from string src to string dst. The two strings may overlap; the copy is always done in a non-destructive manner |
 
-```c
-/*
-	ft_isdigit() checks for a digit (0 through 9).
-*/
+In the C programming language, the functions in the memory-handling library are used to manipulate memory. These functions are used to copy memory, compare memory, and search for memory.
 
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
-```
+```string.h``` : This header file is used to perform operations on strings.
+```memory.h``` : This header file is used to perform operations on memory.
 
-</td>
-</tr>
+There are three types of memory-handling functions:
 
-<tr>
-<td> 
- 
-[ft_isalnum](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isalnum.c)
+1. the `mem` functions manipulate sequences of characters without a **null character** at the end.
+2. the `str` functions manipulate sequences of characters with a **null character** at the end.
+3. the `strn` functions manipulate sequences of characters with a **specified length**.
 
-</td>
-<td>
 
-```c
-/*
-	ft_isalnum() checks for an alphanumeric character; 
-	it is equivalent to (ft_isalpha(c) || ft_isdigit(c)).
-*/
 
-int	ft_isalnum(int c)
-{
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	return (0);
-}
-```
+**Type conversion & memory allocation** :
 
-</td>
-</tr>
+The type conversion and memory allocation functions are used to convert data types and allocate memory.
 
-<tr>
-<td> 
- 
-[ft_isascii](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isascii.c) 
+| Function | Description |
+| --- | --- |
+| [ft_atoi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_atoi.c) | converts a string to an integer |
+| [ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c) | allocates the space for elements of an array. Initializes the elements to zero and returns a pointer to the memory |
+| [ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c) | returns a pointer to a new string which is a duplicate of the string s. Memory for the new string is obtained with malloc |
 
-</td>
-<td>
+In the C programming language, the functions in the type conversion and memory allocation library are used to convert data types and allocate memory.
 
-```c
-/*
-	ft_isascii() checks whether c is a 7-bit unsigned char value that fits into 
-	the ASCII character set.
-*/
-
-int	ft_isascii(int c)
-{
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
-
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_isprint](https://github.com/zakelhajoui/libft/blob/main/libft/ft_isprint.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_isprint() checks for any printable character including space.
-*/
-
-int	ft_isprint(int c)
-{
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_tolower](https://github.com/zakelhajoui/libft/blob/main/libft/ft_tolower.c) 
-
-</td>
-<td>
-
-```c
-/*
-	ft_tolower() converts the letter c to lower case, if possible.
-*/
-
-int	ft_tolower(int c)
-{
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_toupper](https://github.com/zakelhajoui/libft/blob/main/libft/ft_toupper.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_toupper() converts the letter c to upper case, if possible.
-*/
-
-int	ft_toupper(int c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-```
-
-</td>
-</tr>
-
-
-</table>
-
-</details>
-
-
-
-
-```string.h``` : This header file is used to perform operations on the string
-
-There are three types of functions that exist in the string library:
-1. the `str` functions manipulate **null-terminated** sequences of characters.
-2. the `strn` functions manipulate sequences of **non-null characters**.
-3. the `mem` functions manipulate sequences of arbitrary characters without regard to the **null character**.
-
-
-<details>
-	<summary>
-String-processing Functions	
-	</summary>
-	<table>
-<tr>
-<td> String-processing Functions </td> <td> Code </td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strlen](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlen.c)
-
-</td>
-<td>
-
-```c
-/*
-	strlen() - calculate the length of a string
-*/
-
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-```
-
-</td>
-</tr>
-
-
-<tr>
-<td> 
- 
-[ft_strchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strchr.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_strchr() returns a pointer to the first occurrence
-    of the character c in the string s.
-*/
-
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strrchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strrchr.c) 
-
-</td>
-<td>
-
-```c
-/*
-	ft_strrchr() returns a pointer to the last occurrence
-	of the character c in the string s
-*/
-
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int	size;
-
-	size = ft_strlen(s);
-	while (size >= 0)
-	{
-		if (s[size] == (char)c)
-			return ((char *)s + size);
-		size--;
-	}
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
- [ft_strnstr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strnstr.c)
-
-</td>
-<td>
-
-```c
-/* 
-	ft_strnstr() Find the first substring in a length-limited string
-	big:	The string to be searched
-	little:	The string to search for
-	len:	the maximum number of characters to search
-*/
-
-#include "libft.h"
-
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	if (little[i] == '\0')
-		return ((char *) big);
-	while ((big[i] != '\0') && i < len)
-	{
-		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len)
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strncmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strncmp.c)  
-
-</td>
-<td>
-
-```c
-/*
-    ft_strcmp() compares the two strings s1 and s2. It returns an integer less
-	than, equal to, or greater than zero if s1 is found, respectively, 
-	to be less than, to match, or be greater than s2.
-	
-	ft_strncmp() is similar, except it only compares the first (at most) n bytes 
-	of s1 and s2.
-*/
-
-#include "libft.h"
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)  
-
-</td>
-<td>
-
-```c
-/*
-	ft_strlcpy() copies up to size - 1 characters from the NUL-terminated 
-	string src to dst, NUL-terminating the result.
-*/
-
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	len;
-
-	i = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (len);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (len);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strlcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcpy.c)  
-
-</td>
-<td>
-
-```c
-/*
-	ft_strlcpy() copies up to size - 1 characters from the NUL-terminated 
-	string src to dst, NUL-terminating the result.
-*/
-
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	len;
-
-	i = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (len);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (len);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strlcat](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strlcat.c)  
-
-</td>
-<td>
-
-```c
-/*
-	ft_strlcat() appends the NUL-terminated string src to the end of dst.It will
-	append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
-*/
-
-#include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	while (i < dstsize && *dst)
-	{
-		dst++;
-		i++;
-	}
-	if (i == dstsize)
-		return (i + ft_strlen(src));
-	j = 0;
-	while (src[j])
-	{
-		if (j < dstsize - i - 1)
-			*dst ++ = src[j];
-		j++;
-	}
-	*dst = '\0';
-	return (i + j);
-}
-```
-
-</td>
-</tr>
-
-</table>
-
-</details>
-
-
-<details>
-	<summary>
-Memory Functions	
-	</summary>
-
- <table>
-<tr>
-<td> Memory Functions </td> <td> Code </td>
-</tr>
-
-<tr>
-
-<td> 
- 
-[ft_bzero](https://github.com/zakelhajoui/libft/blob/main/libft/ft_bzero.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_bzero() erases the data in the n bytes of the memory starting at 
-	the location pointed to by s, by writing zeros (bytes containing '\0') 
-	to that area.
-*/
-
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
-{
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
-}
-```
-
-</td>
-</tr>
-
-<tr>
-
-<td> 
- 
-[ft_memcmp](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcmp.c)
-
-</td>
-<td>
-
-```c
-/*
-       The memcmp() function compares the first n bytes (each interpreted 
-       as unsigned char) of the memory areas s1 and s2.
-*/
-
-#include "libft.h"
-
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	size_t			i;
-	unsigned char	*obj1;
-	unsigned char	*obj2;
-
-	i = 0;
-	obj1 = (unsigned char *)s1;
-	obj2 = (unsigned char *)s2;
-	while (i < n)
-	{
-		if (obj1[i] != obj2[i])
-			return (obj1[i] - obj2[i]);
-		i++;
-	}
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-
-<td> 
- 
-[ft_memchr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memchr.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_memchr() scans the initial n bytes of the memory area pointed to by s 
-	for the first instance of c.  Both c and the bytes of the memory area 
-	pointed to by s are interpreted as unsigned char.
-*/
-
-#include "libft.h"
-
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	size_t			i;
-	unsigned char	*obj;
-
-	i = 0;
-	obj = (unsigned char *)s;
-	while (i < n)
-	{
-		if (obj[i] == (unsigned char)c)
-			return (&obj[i]);
-		i++;
-	}
-	return (0);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-
-<td> 
- 
-[ft_memset](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memset.c)
-
-</td>
-<td>
-
-```c
-/* 
-	ft_memset() sets the first len bytes of the memory area pointed to by 
-	s to the value specified by c
-*/
-
-#include "libft.h"
-
-void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t			i;
-	unsigned char	*obj;
-
-	i = 0;
-	obj = (unsigned char *)s;
-	while (i < n)
-	{
-		obj[i] = (unsigned char)c;
-		i++;
-	}
-	return (obj);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_memcpy](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memcpy.c)
-
-</td>
-<td>
-
-```c
-/* 
-	ft_memcpy() function copies n bytes from memory area src to memory area dest
-*/
-
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t			i;
-	unsigned char	*s1;
-	unsigned char	*s2;
-
-	i = 0;
-	if (!dst && !src)
-		return (0);
-	s1 = (unsigned char *)dst;
-	s2 = (unsigned char *)src;
-	if (s1 == s2)
-		return (s1);
-	while (i < n)
-	{
-		s1[i] = s2[i];
-		i++;
-	}
-	return (s1);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_memmove](https://github.com/zakelhajoui/libft/blob/main/libft/ft_memmove.c)
-
-</td>
-<td>
-
-```c
-/*
-	ft_memmove() copies len bytes from string src to string dst. The two strings 
-	may overlap; the copy is always done in a non-destructive manner.
-*/
-
-#include "libft.h"
-
-void	*ft_memmove(void *dst, const void *src, size_t len)
-{	
-	unsigned char	*s1;
-	unsigned char	*s2;
-
-	s1 = (unsigned char *)src;
-	s2 = (unsigned char *)dst;
-	if (dst <= src)
-		dst = ft_memcpy(dst, src, len);
-	else
-	{
-		while (len--)
-			s2[len] = s1[len];
-	}
-	return (dst);
-}
-```
-
-</td>
-</tr>
-
-
-</table>
-
-</details>
-
-
-
-```stdlib.h``` : This is the general purpose standard library header file. It includes functions for type conversion(atof,atoi,etc), memory allocation and deallocation(malloc,calloc,free,etc)
-
-<details>
-	<summary>
-		Type conversion & memory allocation 
-	</summary>
- <table>
-<tr>
-<td> Type conversion & memory allocation </td> <td> Code </td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_atoi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_atoi.c) 
-</td>
-<td>
-
-```c
-/*
-	ft_atoi() convert a string to an integer
-*/
-
-#include "libft.h"
-
-static int	skip_space(int *i, const char *str)
-{
-	int	sign;
-
-	sign = 1;
-	while ((str[*i] >= 9 && str[*i] <= 13) || str[*i] == 32)
-		(*i)++;
-	if (str[*i] == '-' || str[*i] == '+')
-	{
-		if (str[*i] == '-')
-			sign *= -1;
-		(*i)++;
-	}
-	return (sign);
-}
-
-int	ft_atoi(const char *str)
-{
-	int			sign;
-	int			i;
-	long long	res;
-	long long	prev;
-	long long	tmp;
-
-	i = 0;
-	res = 0;
-	sign = skip_space(&i, str);
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		prev = res;
-		res = res * 10 + str[i] - '0';
-		tmp = res / 10;
-		if (tmp != prev)
-		{
-			if (sign == 1)
-				return (-1);
-			else
-				return (0);
-		}
-		i++;
-	}
-	return (sign * res);
-}
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_calloc](https://github.com/zakelhajoui/libft/blob/main/libft/ft_calloc.c)  
-</td>
-<td>
-
-```c
-/*
-	ft_calloc() — Allocates the space for elements of an array. 
-	Initializes the elements to zero and returns a pointer to the memory.
-*/
-
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*ptr;
-
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, (nmemb * size));
-	return (ptr);
-}
-
-```
-
-</td>
-</tr>
-
-<tr>
-<td> 
- 
-[ft_strdup](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strdup.c)
-</td>
-<td>
-
-```c
-/*
-	strdup() returns a pointer to a new string which is a duplicate 
-	of the string s.  Memory for the new string is obtained with malloc.
-*/
-
-#include "libft.h"
-
-char	*ft_strdup(const char *src)
-{
-	size_t	i;
-	size_t	size;
-	char	*str;
-
-	i = 0;
-	size = ft_strlen(src);
-	str = malloc(size + 1);
-	if (str == NULL)
-		return (NULL);
-	while (src[i])
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-```
-
-</td>
-</tr>
-
-
-</table>
-
-</details>
+```stdlib.h``` : This header file is used to perform operations on memory.
 
 
 ## Part 2 - Additional functions :
-  
-  | No     | Additional functions |
-| ------ | ------------------- |
-| 1      | [ft_substr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_substr.c)      |
-| 2      | [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strjoin.c)    |
-| 3      | [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strtrim.c)    |
-| 4      | [ft_split](https://github.com/zakelhajoui/libft/blob/main/libft/ft_split.c)        |
-| 5      | [ft_itoa](https://github.com/zakelhajoui/libft/blob/main/libft/ft_itoa.c)          |
-| 6      | [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strmapi.c)    |
-| 7      | [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/libft/ft_striteri.c)  |
-| 8      | [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putchar_fd.c)   |
-| 9      | [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putstr_fd.c)     |
-| 10      | [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putendl_fd.c)  |
-| 11      | [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putnbr_fd.c)    |
 
-# II - Bonus part :
+The additional functions are used to perform various tasks, such as allocating and returning a substring from a string, joining two strings together, trimming a string, splitting a string, converting an integer to a string, and applying a function to each character in a string.
 
-  | No     | Bonus part |
-| ------ | ------------------- |
-| 1      | [ft_lstnew](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstnew.c) |
-| 2      | [ft_lstadd_front](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_front.c)    |
-| 3      | [ft_lstsize](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstsize.c)   |
-| 4      | [ft_lstlast](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstlast.c)        |
-| 5      | [ft_lstadd_back](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_back.c)          |
-| 6      | [ft_lstdelone](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstdelone.c)    |
-| 7      | [ft_lstclear](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstclear.c)  |
-| 8      | [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstiter.c)   |
+| Additional functions | DESCRIPTION |
+| ------------------- | ------------------- |
+| [ft_substr](https://github.com/zakelhajoui/libft/blob/main/libft/ft_substr.c)      | Allocates and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’. |
+| [ft_strjoin](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strjoin.c)    | Allocates and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’. |
+| [ft_strtrim](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strtrim.c)    | Allocates and returns a copy of ’s1’ with the characters specified in ’set’ removed from the beginning and the end of the string. |
+| [ft_split](https://github.com/zakelhajoui/libft/blob/main/libft/ft_split.c)        | Allocates and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. |
+| [ft_itoa](https://github.com/zakelhajoui/libft/blob/main/libft/ft_itoa.c)          | Allocates and returns a string representing the integer received as an argument. |
+| [ft_strmapi](https://github.com/zakelhajoui/libft/blob/main/libft/ft_strmapi.c)    | Applies the function ’f’ to each character of the string ’s’ to create a new string resulting from successive applications of ’f’. |
+| [ft_striteri](https://github.com/zakelhajoui/libft/blob/main/libft/ft_striteri.c)  | Applies the function ’f’ to each character of the string passed as argument, and passing its index as first argument. |
+| [ft_putchar_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putchar_fd.c)   | Outputs the character ’c’ to the given file descriptor. |
+| [ft_putstr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putstr_fd.c)   | Outputs the string ’s’ to the given file descriptor. |
+| [ft_putendl_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putendl_fd.c)  | Outputs the string ’s’ to the given file descriptor, followed by a newline. |
+| [ft_putnbr_fd](https://github.com/zakelhajoui/libft/blob/main/libft/ft_putnbr_fd.c)    | Outputs the integer ’n’ to the given file descriptor. |
 
 
-# Resources
+# II - Bonus part
+
+The bonus part of the project consists of implementing additional functions that are not part of the standard C library. These functions are not mandatory, but they can be useful for various programming tasks.
+
+| Bonus functions | DESCRIPTION |
+| ------------------- | ------------------- |
+| [ft_lstnew](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstnew.c) | Allocates and returns a new element. The variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL. |
+| [ft_lstadd_front](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_front.c)    | Adds the element ’new’ at the beginning of the list. |
+| [ft_lstsize](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstsize.c)   | Counts the number of elements in a list. |
+| [ft_lstlast](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstlast.c)        | Returns the last element of the list. |
+| [ft_lstadd_back](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstadd_back.c) | Adds the element ’new’ at the end of the list. |
+| [ft_lstdelone](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstdelone.c)    | Takes as a parameter an element and frees the memory of the element’s content using the function ’del’ given as a parameter and free the element. |
+| [ft_lstclear](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstclear.c)  | Deletes and frees the given element and every successor of that element, using the function ’del’ and free. Finally, the pointer to the list must be set to NULL. |
+| [ft_lstiter](https://github.com/zakelhajoui/libft/blob/main/libft/ft_lstiter.c)   | Iterates the list ’lst’ and applies the function ’f’ to the content of each element. |
+
+
+The bonus part of the project consists of implementing additional functions that are not part of the standard C library. These functions are not mandatory, but they can be useful for various programming tasks.
+
+```list.h``` : This header file is used to perform operations on lists.
+
+Lists are a type of data structure that can be used to store a collection of elements. Each element in a list is called a node, and each node contains a value and a pointer to the next node in the list. Lists can be used to store data in a specific order, and they can be used to perform various operations on the data, such as adding, removing, and searching for elements.
+
+
+# III - How to use the library
+
+To use the library, you need to compile the source files into a library file. You can do this by running the following commands:
+
+```bash
+make
+```
+
+This will compile the source files and create a library file called `libft.a`. You can then link this library file to your C programs by adding the following flag to the compiler command:
+
+```bash
+gcc -o my_program my_program.c -L. -lft
+```
+
+This will link the library file to your program and allow you to use the functions in the library.
+
+
+# IV - Resources
 
 - [Makefile](https://github.com/n1kito/Makefile)
 
-# Notes
+# V - Explaining the theory behind the project 
+
+## **Introduction to Computer Science**
+
+### **What is a computer?**
+
+A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. Modern computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks.
+
+### **What is Computer Science?**
+
+Computer science is the study of computers and computing concepts. It includes the study of algorithms, data structures, programming languages, computer architecture, and software engineering.
+
+### **What is a program?**
+
+A program is a set of instructions that tell a computer how to perform a specific task. Programs are written in programming languages, which are designed to be easy for humans to read and write.
+
+### **What is an algorithm?**
+
+An algorithm is a step-by-step procedure for solving a problem. It is a sequence of well-defined instructions that can be executed by a computer to perform a specific task.
+
+### **What is a data structure?**
+
+A data structure is a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, trees, and graphs.
+
+### **What is a programming language?**
+
+A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages are used to write programs that control the behavior of a computer.
+
+### **What is computer architecture?**
+
+Computer architecture is the design of computer systems. It includes the design of the hardware components of a computer, such as the central processing unit (CPU), memory, and input/output devices.
 
 ## **Computer Architecture:** 
+
+The term computer architecture is used to describe the design of a computer system. It includes the design of the hardware components of a computer, such as the central processing unit (CPU), memory, and input/output devices.
 
 - Is how processor is designed to perform tasks and different architectures are good at different tasks.
 
@@ -966,139 +206,164 @@ char	*ft_strdup(const char *src)
   
 ![Von-Neumann-Architecture](https://github.com/user-attachments/assets/782a9de3-c595-41ef-a494-4845c54a9882)
 
+## Computer Memory
 
-Any computer system to be useful, it needs a **storage - storage for data**. A computer needs **primary storage** for any data. that it needs access quickly. this includes the start-up instructions the operating system, **Program** that are running and any associated data.
+- **Memory** is used to store data and instructions that are currently being used by the CPU. There are two main types of computer memory: primary storage and secondary storage.
 
-There are tow main types of **Primary storage : RAM - ROM**
+- **Primary storage** is used to store data and instructions that are currently being used by the CPU. It is volatile, meaning that it loses its contents when the power is turned off. Examples of primary storage include RAM and ROM.
 
-**Program** : is a set of functions to perform a task
+- **Secondary storage** is used to store data and programs that are not currently being used by the CPU. It is non-volatile, meaning that it retains its contents when the power is turned off. Examples of secondary storage include hard drives, solid-state drives, and optical discs.
 
-**Function** A subprogram that returns a value to the main program
+### **Primary Storage :**
 
-- is a closed entity that has :
-    - Input date : the parameters.
-    - A piece of output data : the return value.
-- **Parameters** Values that a main program sends to subprograms for them to use.
+Primary storage is used to store data and instructions that are currently being used by the CPU. It is volatile, meaning that it loses its contents when the power is turned off. Examples of primary storage include RAM and ROM.
 
 ### **RAM :**
 
-Ram is a part of the main memory in a computer system.
+**Random Access Memory** is a type of computer memory that can be accessed randomly. It is used to store data and machine code currently being used by the CPU. It is volatile, meaning that it loses its contents when the power is turned off.
 
 When a program is loaded, it is copied from **secondary storage**, Such as a hard-disk. Any data is associated with the program will also be stored in **RAM** so that the **CPU** can access both the data and instructions
 
-### **The units of a data storage :**
+### **ROM :**
 
-**Computer uses electronic circuits etched onto computer chips to store data and instructions.**
+**Read-Only Memory** is a type of computer memory that can only be read, not written to. It is used to store the firmware of a computer system, such as the BIOS. It is non-volatile, meaning that it retains its contents when the power is turned off.
 
-these circuits electronic switches made from tiny transistors Each switch can be in one of two states: ON or OFF.
+### **Secondary Storage :**
 
-The two states are represented by the number 1 or 0. A computer uses combinations of these 1s and 0s to represent data and instructions.
+**Secondary storage** is used to store data and programs that are not currently being used by the CPU. It is non-volatile, meaning that it retains its contents when the power is turned off. Examples of secondary storage include hard drives, solid-state drives, and optical discs.
 
-There i a number system that only uses the two values 1 and 0. it is called the **binary number system** and it is used to describe the on/off status of all the switches in a computer.
+### **CPU :**
 
-**1** binary digit is called a **bit,** computer often group **8 bits** together as one unit of data .
+The **Central Processing Unit** is the main component of a computer system. It is responsible for executing instructions and performing calculations. The CPU consists of three main components: the control unit, the arithmetic logic unit, and the registers.
 
-These 8 bits together are called a byte.
+- **Control Unit** : The control unit is responsible for fetching instructions from memory, decoding them, and executing them.
+
+- **Arithmetic Logic Unit** : The arithmetic logic unit is responsible for performing arithmetic and logical operations on data.
+
+- **Registers** : Registers are small, high-speed storage locations in the CPU that are used to store data temporarily during processing.
+
+
+## Data Storage
+
+Data is stored in a computer using electronic circuits. These circuits are made up of tiny transistors that can be in one of two states: on or off. Each switch can be represented by the number 1 or 0. A computer uses combinations of 1s and 0s to represent data and instructions.
+
+### **Binary Number System :**
+
+The binary number system is a base-2 number system that uses only two digits: 0 and 1. It is used by computers to represent data and instructions. Each digit in a binary number is called a bit, and a group of 8 bits is called a byte.
+
+- **Bit** : A bit is the smallest unit of data in a computer. It can have one of two values: 0 or 1.
+- **Byte** : A byte is a group of 8 bits. It is the basic unit of storage in a computer.
+
 
 ![bytes-not-bits](https://github.com/user-attachments/assets/3a58d4d1-d5b1-4ead-8a70-0107b8948f91)
 
 ![bytes](https://github.com/user-attachments/assets/e2e83ed6-7f40-4dfa-9f33-755a030f45a8)
 
-
 ![many-meanings](https://github.com/user-attachments/assets/05a48a7a-2c20-4c26-8b93-4256c4c2f115)
 
-## Data Storage
+### **Data Types :**
 
-Recall that the most basic unit of memory, the bit, has two possible states, **“on” or “off”**. If we used one bit to store a number, we could use each different state to represent a different number. For example, a bit could be used to represent the numbers 0, when the bit is off, and 1, when the bit is on.
+Data types are used to represent different types of data in a computer. Each data type has a specific size and range of values that it can represent. Common data types include integers, floating-point numbers, characters, and strings.
 
-We will need to store numbers much larger than 1; to do that we need more bits.
+- **Integers** : Integers are whole numbers that can be positive, negative, or zero. They are commonly stored using a word of memory, which is 4 bytes or 32 bits.
+- **Floating-Point Numbers** : Floating-point numbers are numbers that have a decimal point. They are commonly stored using a word of memory, which is 4 bytes or 32 bits.
+- **Characters** : Characters are single letters, digits, or symbols. They are commonly stored using a single byte of memory, which is 8 bits.
+- **Strings** : Strings are sequences of characters. They are commonly stored using a word of memory, which is 4 bytes or 32 bits.
 
-### **Numbers :**
 
-If we use two bits together to store a number, each bit has two possible states, so there are four possible combined states:
+### **Integers :**
 
-- both bits off,
-- first bit off and second bit on,
-- first bit on and second bit off,
-- or both bits on.
+Integers are whole numbers that can be positive, negative, or zero. They are commonly stored using a word of memory, which is 4 bytes or 32 bits. Integers can be represented using different number bases, such as binary, octal, decimal, and hexadecimal.
 
-The settings for a series of bits are typically written using a 0 for off and a 1 for on. For example, the four possible states for two bits are 00, 01, 10, 11. This representation is called **binary** notation.
-
-### **Integers**
+- **Binary** : Binary is a base-2 number system that uses only two digits: 0 and 1.
+- **Octal** : Octal is a base-8 number system that uses the digits 0 through 7.
+- **Decimal** : Decimal is a base-10 number system that uses the digits 0 through 9.
+- **Hexadecimal** : Hexadecimal is a base-16 number system that uses the digits 0 through 9 and the letters A through F.
 
 ![integers](https://github.com/user-attachments/assets/af62643e-0fa1-42a6-bbe6-1dfd1844a571)
 
-Integers are commonly stored using a word of memory, which is 4 bytes or 32 bits, so integers from 0 up to 4,294,967,295
-in the decimal system we are used to using 10 symbols or values : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
-
 ![bases](https://github.com/user-attachments/assets/ddd65123-65bc-4489-b364-5578b1e16969)
 
+### **Endianness :**
 
-
-we use the symbols to write numbers
-
-|100s|10s|1s|
-|---|---|---|
-|5|2|7|
-
-in binary we just have two symbols or values, `o` and `1`. this means that in binary number system each column heading is twice as big as the previous one as we move from right to left.
-
-|128|64|32|16|8|4|2|1|
-|---|---|---|---|---|---|---|---|
-|0|0|1|0|0|1|1|1|
-
-how convert : 32 + 4 + 2 +1 = 39
-
-100111 = 39.
-
-- Convert the decimal number 142 into binary
-
-is 128 smaller than 142 ?
-
-yes it we re record 1 in the first column from left-hand side.
-
-|128|64|32|16|8|4|2|1|
-|---|---|---|---|---|---|---|---|
-|1||||||||
-
-142 - 128 = 14
-
-we subtract 128 from 142, to leave a remainder of 14.
-
-we now check 14 against the next column value
-
-|128|64|32|16|8|4|2|1|
-|---|---|---|---|---|---|---|---|
-|1|0|0|0|1||||
-
-14 - 8 = 6
-
-……
-
-|128|64|32|16|8|4|2|1|
-|---|---|---|---|---|---|---|---|
-|1|0|0|0|1|1|1|0|
+The endianness of a computer system refers to the order in which bytes are stored in memory. There are two common types of endianness: big-endian and little-endian.
 
 ![little-big-endian](https://github.com/user-attachments/assets/2499a68c-bd14-4e6a-a522-4a269b3900db)
 
+
+### **Signed and Unsigned Integers :**
+
+Signed integers can represent both positive and negative numbers, while unsigned integers can only represent positive numbers. The most significant bit of a signed integer is used to represent the sign of the number: 0 for positive and 1 for negative.
+
+- **Signed Integers** : Signed integers can represent both positive and negative numbers. The most significant bit of a signed integer is used to represent the sign of the number: 0 for positive and 1 for negative.
+- **Unsigned Integers** : Unsigned integers can only represent positive numbers. They do not have a sign bit, so they can represent larger positive numbers than signed integers.
+
 ![signed-integers](https://github.com/user-attachments/assets/9321499a-f97e-46ca-bffe-ca53af9497fa)
+
+### **Floating-Point Numbers :**
+
+Floating-point numbers are numbers that have a decimal point. They are commonly stored using a word of memory, which is 4 bytes or 32 bits. Floating-point numbers are represented using the IEEE 754 floating-point standard, which defines how floating-point numbers are stored in memory.
+
+- **IEEE 754** : The IEEE 754 floating-point standard defines how floating-point numbers are stored in memory. It specifies the format of floating-point numbers, including the sign bit, exponent, and mantissa.
+
+
+### Hexadecimal
+
+Hexadecimal is a base-16 number system that uses the digits 0 through 9 and the letters A through F. It is commonly used in computing to represent binary numbers in a more compact and readable form.
+
+![hexadecimal](https://github.com/user-attachments/assets/2c517535-2ecc-460d-bfcc-0526cf4c3d6d)
+
+
+### Bitwise Operations
+
+Bitwise operations are operations that are performed on individual bits of a number. They are commonly used in computer programming to manipulate binary data. Common bitwise operations include AND, OR, XOR, and NOT.
+
+![bitwise-operations](https://github.com/user-attachments/assets/4b96b58a-9dcf-4341-9d3b-8ca3f65717b4)
+
+![bit-tricks](https://github.com/user-attachments/assets/96ab5a3b-d312-4386-b834-af1a2fd7c83f)
+
+![bit-flags](https://github.com/user-attachments/assets/66562cc6-0ad7-4746-af76-d1a067d7266e)
 
 
 ### **Characters :**
 
+Characters are commonly stored using a single byte of memory, which is 8 bits. This allows characters from 0 up to 255 to be stored. Characters are represented using the ASCII character encoding standard, which assigns a unique number to each character.
 
-Text is stored on a computer by first converting each character to an integer and then storing the integer.
+#### **Character Encoding :**
 
-Example : to store the letter ‘A’, we will actually store the number 65; ‘B’ is 66 …
+Character encoding is the process of representing characters in a computer using a unique code. There are several character encoding standards, including ASCII and Unicode.
 
-A letter is usually stored using a single byte (8 bits ) Each letter is assigned an integer number and that number is stored
+- **ASCII** : The American Standard Code for Information Interchange (ASCII) is a character encoding standard that uses 7 or 8 bits to represent characters. It is used to represent text in computers.
 
-The conversion of letters to numbers is called an encoding. the encoding used in the examples above is called **[ASCII](https://www.ascii-code.com/)**
+- **Unicode** : Unicode is a character encoding standard that uses 16 bits to represent characters. It is used to represent text in multiple languages.
+
+For example, the character 'A' is represented by the number 65 in ASCII. The character 'a' is represented by the number 97 in ASCII.
 
 ![ascii (1)](https://github.com/user-attachments/assets/02d58747-f600-42d9-853c-97539fa0147a)
 
+- https://www.ascii-code.com/
+
+### **Strings :**
+
+Strings are sequences of characters. They are commonly stored using a word of memory, which is 4 bytes or 32 bits. Strings are terminated by a null character, which is represented by the number 0.
+
+- **Null Character** : The null character is used to terminate strings in C. It is represented by the number 0 and is used to indicate the end of a string.
+
+### **String Literals :**
+
+String literals are sequences of characters enclosed in double quotes. They are used to represent strings in C programs. String literals are stored in read-only memory and cannot be modified.
+
+- **Read-Only Memory** : Read-only memory is a type of computer memory that can only be read, not written to. It is used to store data that should not be modified, such as string literals.
+- **Modifying Strings** : Strings stored in read-only memory cannot be modified. If you need to modify a string, you should copy it to a writable memory location first.
+
 
 ### **Overflow errors**
+
+Overflow errors occur when the result of an arithmetic operation is too large to be represented in the available memory. For example, if you try to add two large numbers together and the result is larger than the maximum value that can be stored in memory, an overflow error will occur.
+
+![integer-overflow](https://github.com/user-attachments/assets/f7ebb7af-98d9-4b36-b132-9fbba2460606)
+
+Example of overflow error :
 
 If we are working with 8-bit numbers and all we can store is 8 bits, the following problem might occur.For example, if we add these two 8-bit numbers:
 
@@ -1112,37 +377,27 @@ In this example, we tried to add 11000110 (198 in decimal) and 11100011 (227 in 
 
 The largest value we can store in 8 bits is 11111111, or 255 in decimal. So the reason for the overflow error is that 425 is too large a number to store in 8 bits.
 
-[7.4 Computer Memory](https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html)
+ - https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node55.html
 
-### The problem with overflow :
-
-If you have an unsigned int number at 255, and you increment it, you’ll get 256 in return. As expected. If you have an unsigned char number at 255, and you increment it, you’ll get 0 in return. It resets starting from the initial possible value.
-
-If you have an unsigned char number at 255 and you add 10 to it, you’ll get the number 9
-
-![integer-overflow](https://github.com/user-attachments/assets/f7ebb7af-98d9-4b36-b132-9fbba2460606)
 
 ![big-integers](https://github.com/user-attachments/assets/08902d8e-80b5-42f7-82b6-fd3b65f45256)
 
 ![32-bit-small](https://github.com/user-attachments/assets/65f51eb6-4252-4499-ad01-ad6bebfee196)
 
-### Hexadecimal
 
-![hexadecimal](https://github.com/user-attachments/assets/2c517535-2ecc-460d-bfcc-0526cf4c3d6d)
-
-
-### Bitwise Operations
-
-![bitwise-operations](https://github.com/user-attachments/assets/4b96b58a-9dcf-4341-9d3b-8ca3f65717b4)
-
-![bit-tricks](https://github.com/user-attachments/assets/96ab5a3b-d312-4386-b834-af1a2fd7c83f)
-
-![bit-flags](https://github.com/user-attachments/assets/66562cc6-0ad7-4746-af76-d1a067d7266e)
 
 
 ### Memory allocation
 
-![memory-allocation (1)](https://github.com/user-attachments/assets/020582e4-3403-4d16-aa37-a51ed9640616)
+Memory allocation is the process of reserving a block of memory for a program to use. In C, memory allocation is done using the malloc function, which allocates a block of memory of a specified size and returns a pointer to the beginning of the block.
 
+- **malloc** : The malloc function is used to allocate a block of memory of a specified size. It returns a pointer to the beginning of the block.
+
+- **free** : The free function is used to deallocate a block of memory that was previously allocated using malloc. It frees the memory so that it can be used by other programs.
+
+- **Memory Leaks** : Memory leaks occur when a program allocates memory but does not deallocate it when it is no longer needed. This can lead to a loss of memory and a decrease in performance.
+
+
+![memory-allocation (1)](https://github.com/user-attachments/assets/020582e4-3403-4d16-aa37-a51ed9640616)
 
 
