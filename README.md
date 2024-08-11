@@ -1026,6 +1026,8 @@ The settings for a series of bits are typically written using a 0 for off and a 
 
 ### **Integers**
 
+![integers](https://github.com/user-attachments/assets/af62643e-0fa1-42a6-bbe6-1dfd1844a571)
+
 Integers are commonly stored using a word of memory, which is 4 bytes or 32 bits, so integers from 0 up to 4,294,967,295
 
 in the decimal system we are used to using 10 symbols or values : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
@@ -1073,6 +1075,12 @@ we now check 14 against the next column value
 |128|64|32|16|8|4|2|1|
 |---|---|---|---|---|---|---|---|
 |1|0|0|0|1|1|1|0|
+
+![signed-integers](https://github.com/user-attachments/assets/9321499a-f97e-46ca-bffe-ca53af9497fa)
+
+![little-big-endian](https://github.com/user-attachments/assets/2499a68c-bd14-4e6a-a522-4a269b3900db)
+
+
 
 ### **Characters :**
 
