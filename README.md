@@ -400,4 +400,7 @@ Memory allocation is the process of reserving a block of memory for a program to
 
 ![memory-allocation (1)](https://github.com/user-attachments/assets/020582e4-3403-4d16-aa37-a51ed9640616)
 
+![segfaults](https://github.com/user-attachments/assets/c755d6f5-2802-4920-b05d-c88cb22ba125)
+
+
 
