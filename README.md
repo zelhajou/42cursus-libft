@@ -11,6 +11,8 @@ Libft is a library of various utility functions in C, created as a project for t
 ## Part 1 - Libc functions :
 The term "**libc**" is commonly used as a shorthand for the "standard C library", a library of standard functions that can be used by all C programs.
 
+![libc](https://github.com/user-attachments/assets/838d024e-8e05-44e6-b49b-345db88824a5)
+
 **Character-handling functions**
 
 The character-handling functions are used to check or transform characters. They are used to determine whether a character is a letter, a digit, a space, or a punctuation mark, and to convert a letter to uppercase or lowercase.
