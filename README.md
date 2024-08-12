@@ -387,8 +387,6 @@ The largest value we can store in 8 bits is 11111111, or 255 in decimal. So the 
 ![32-bit-small](https://github.com/user-attachments/assets/65f51eb6-4252-4499-ad01-ad6bebfee196)
 
 
-
-
 ### Memory allocation
 
 Memory allocation is the process of reserving a block of memory for a program to use. In C, memory allocation is done using the malloc function, which allocates a block of memory of a specified size and returns a pointer to the beginning of the block.
@@ -398,11 +396,14 @@ Memory allocation is the process of reserving a block of memory for a program to
 - **free** : The free function is used to deallocate a block of memory that was previously allocated using malloc. It frees the memory so that it can be used by other programs.
 
 - **Memory Leaks** : Memory leaks occur when a program allocates memory but does not deallocate it when it is no longer needed. This can lead to a loss of memory and a decrease in performance.
-
-
+- 
 ![memory-allocation (1)](https://github.com/user-attachments/assets/020582e4-3403-4d16-aa37-a51ed9640616)
 
 ![segfaults](https://github.com/user-attachments/assets/c755d6f5-2802-4920-b05d-c88cb22ba125)
+
+### System calls
+
+![syscalls](https://github.com/user-attachments/assets/cf4abaf0-eb01-43cd-b7b1-f59e11b873d4)
 
 
 
