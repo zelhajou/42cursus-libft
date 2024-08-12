@@ -403,6 +403,8 @@ Memory allocation is the process of reserving a block of memory for a program to
 
 ### System calls
 
+System calls are used to request services from the operating system. They are used to perform tasks such as reading and writing files, creating processes, and managing memory. System calls are used to interact with the operating system and perform low-level operations.
+
 ![syscalls](https://github.com/user-attachments/assets/cf4abaf0-eb01-43cd-b7b1-f59e11b873d4)
 
 
